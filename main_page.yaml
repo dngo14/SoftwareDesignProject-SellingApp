@@ -1,0 +1,80 @@
+- View:
+    style:
+      width: 100%
+      height: 100%
+      backgroundColor: grey
+    children:
+        - View:
+            style:
+              width: 100%
+              height: 10%
+              backgroundColor: darkblue
+            children:
+              - Text:
+                  index: 3
+                  style:
+                    left: 50%
+                    color: white
+                    fontSize: 50
+        - View:
+            style:
+              width: 20%
+              height: 70%
+              backgroundColor: black
+            children:
+              - View:
+                  style:
+                    width: 100%
+                    height: 30%
+                    backgroundColor: darkblue
+                    top: 0%
+                  children:
+                    - Text:
+                        index: 40
+                        style:
+                          color: white
+                          fontSize: 20
+
+              - View:
+                  style:
+                    width: 100%
+                    height: 30%
+                    backgroundColor: darkblue
+                    top: 5%
+                  children:
+                    - Text:
+                        index: 50
+                        style:
+                          color: white
+                          fontSize: 20                   
+              - View:
+                  style:
+                    width: 100%
+                    height: 30%
+                    backgroundColor: darkblue
+                    top: 10%
+                  children:
+                    - Text:
+                        index: 70
+                        style:
+                          color: white
+                          fontSize: 20
+        - Text:
+            index: 100
+            style:
+              color: white
+              fontSize: 30
+              position: absolute  
+              top: 20% 
+              left: 40%
+
+        - View:
+                style:
+                  width: 80%
+                  height: 100%
+                  backgroundColor: white
+                  left: 20%
+
+
+
+
