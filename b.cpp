@@ -76,11 +76,7 @@ public:
     x = s+".txt";
         ofstream fout("Test.txt");
         fout << s;
-        fout << "\n"; 
-        fout << d;
-        fout << "\n";
-        fout << e;
-        fout << "\n";
+ 
         fout.close();
     }
  };
