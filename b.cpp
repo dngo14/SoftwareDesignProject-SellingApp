@@ -3,7 +3,9 @@
 using namespace std;
 
 class Post {
-    char *name, *description, *email;
+    char *name;
+    char *description;
+    char *email;
 
 public:
     Post() {
@@ -54,26 +56,30 @@ public:
             }
     }
 
-    string s = ""; 
-    int i=0;
-    while (name[i]!='0') { 
-        s = s + name[i]; 
-        i++;
-    } 
-    string d = ""; 
-    int j=0;
-    while (description[j]!='0') { 
-        d = d + description[j]; 
-        j++;
-    } 
-    string e = ""; 
-    int k=0;
-    while (email[k]!='0') { 
-        e = e + email[k]; 
-        k++;
-    }
-    string x = "";
-    x = s+".txt";
+    // string s = ""; 
+    // int i=0;
+    // while (name[i]!='0') { 
+    //     s = s + name[i]; 
+    //     i++;
+    // } 
+    // string d = ""; 
+    // int j=0;
+    // while (description[j]!='0') { 
+    //     d = d + description[j]; 
+    //     j++;
+    // } 
+    // string e = ""; 
+    // int k=0;
+    // while (email[k]!='0') { 
+    //     e = e + email[k]; 
+    //     k++;
+    // }
+    // string x = "";
+    // x = s+".txt";
+    string s(name);
+    string d(description);
+    string e(email);
+
         ofstream fout("Test.txt");
         fout << s;
  
