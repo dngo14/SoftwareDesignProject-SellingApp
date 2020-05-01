@@ -9,7 +9,6 @@
       backgroundColor: 'white'
       borderColor: 'gray'
       borderWidth: 1
-
 - TextInput:
     index: 100
     len: 40
@@ -32,5 +31,17 @@
       backgroundColor: 'white'
       borderColor: 'gray'
       borderWidth: 1
+ - Button:
+            style:
+              width: 10%
+              height: 10%
+              alignItems: center
+              borderRadius: 25
+              top: 90%
+              left: 40%
+              backgroundColor: grey
+            on_touch:
+              backgroundColor: rgb(200,200,200)
+
 
 

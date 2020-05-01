@@ -29,24 +29,28 @@ public:
 
     void store() {
         for (int i = 0; i < 20; i++) {
-            if (get_char_at(i)!='0') {
-                name[i] = get_char_at(i);
+            char v = get_char_at(i);
+            if (v!='~') {
+                name[i] = v;
             }
         }
         for (int i = 100; i < 280; i++) {
-            if (get_char_at(i)!='0') {
-                description[i] = get_char_at(i);
+            char v = get_char_at(i);
+            if (v!='~') {
+                description[i] = v;
             }
         }
         for (int i = 300; i < 320; i++) {
-            if (get_char_at(i)!='0') {
-                email[i] = get_char_at(i);
+            char v = get_char_at(i);
+            if (v!='~') {
+                email[i] = v;
             }
         }
 
         for (int i = 0; i < 320; i++) {
-            if(get_char_at(i)!='0') {
-                put_char_at(i, '0');
+            char v = get_char_at(i);
+            if(v!='~') {
+                put_char_at(i, '~');
             }
     }
 
@@ -56,8 +60,20 @@ public:
         s = s + name[i]; 
         i++;
     } 
+    string d = ""; 
+    int i=0;
+    while (description[i]!='0') { 
+        d = d + description[i]; 
+        i++;
+    } 
+    string e = ""; 
+    int i=0;
+    while (email[i]!='0') { 
+        e = e + email[i]; 
+        i++;
+    }
         ofstream fout(s+".txt");
-        fout << name << "\n" << description << "\n" << email << "\n";
+        fout << s << "\n" << d << "\n" << e << "\n";
         fout.close();
     }
  };
@@ -65,15 +81,18 @@ public:
 
 int main() {
   init();
+  print_at(500, "Success!!");
   if (just_starting()) {
-    print_at(0, "");
-    print_at(100, "");
-    print_at(300, "");
+      print_at(0, "");
+      print_at(100, "");
+      print_at(300, "");
   }
   else if (received_event()) {
       Post p1{};
       p1.store();
+      add_yaml("success.yaml");
   }
   add_yaml("input.yaml");
+
   quit();
 }
