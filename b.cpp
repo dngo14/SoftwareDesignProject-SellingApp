@@ -85,7 +85,23 @@ public:
         fout.close();
     }
     void display() {
-        cout << name << endl << description << endl << email << endl;
+        int i = 0;
+        while (name[i]!='0') {
+            cout << name[i];
+            i++;
+        }
+        i = 0;
+        cout << endl;
+        while (description[i]!='0') {
+            cout << description[i];
+            i++;
+        }
+        i = 0;
+        cout << endl;
+        while (email[i]!='0') {
+            cout << email[i];
+            i++;
+        }
     }
  };
 
