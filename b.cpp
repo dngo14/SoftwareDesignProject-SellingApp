@@ -74,8 +74,13 @@ public:
     }
     string x = "";
     x = s+".txt";
-        ofstream fout("Tets.txt");
-        fout << s << "\n" << d << "\n" << e << "\n";
+        ofstream fout("Test.txt");
+        fout << s;
+        fout << "\n"; 
+        fout << d;
+        fout << "\n";
+        fout << e;
+        fout << "\n";
         fout.close();
     }
  };
