@@ -12,7 +12,7 @@ public:
         name = new char [20];
         description = new char [180];
         email = new char[20];
-    for (int i = 0; i < 20; i++) {
+    /*for (int i = 0; i < 20; i++) {
             name[i] = '0';
     }
     for (int i = 0; i < 180; i++) {
@@ -21,6 +21,7 @@ public:
     for (int i = 0; i < 20; i++) {
             email[i] = '0';
     }
+    */
     }
 
     ~Post() {
@@ -77,32 +78,15 @@ public:
     // string x = "";
     // x = s+".txt";
     string s(name);
+
     string d(description);
     string e(email);
 
         ofstream fout("Test.txt");
-        fout << s << "\n" << d << "\n" << e << "\n";
+        fout << s << "\n" << s << "\n" << s << "\n";
         fout.close();
     }
-    void display() {
-        int i = 0;
-        while (name[i]!='0') {
-            cout << name[i];
-            i++;
-        }
-        i = 0;
-        cout << endl;
-        while (description[i]!='0') {
-            cout << description[i];
-            i++;
-        }
-        i = 0;
-        cout << endl;
-        while (email[i]!='0') {
-            cout << email[i];
-            i++;
-        }
-    }
+
  };
 
 
@@ -117,7 +101,6 @@ int main() {
   else if (received_event()) {
       Post p1{};
       p1.store();
-      p1.display();
       add_yaml("success.yaml");
   }
   add_yaml("input.yaml");
