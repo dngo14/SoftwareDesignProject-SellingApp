@@ -61,15 +61,15 @@ public:
         i++;
     } 
     string d = ""; 
-    int i=0;
-    while (description[i]!='0') { 
-        d = d + description[i]; 
+    int j=0;
+    while (description[j]!='0') { 
+        d = d + description[j]; 
         i++;
     } 
     string e = ""; 
-    int i=0;
-    while (email[i]!='0') { 
-        e = e + email[i]; 
+    int k=0;
+    while (email[k]!='0') { 
+        e = e + email[k]; 
         i++;
     }
         ofstream fout(s+".txt");
