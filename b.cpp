@@ -72,7 +72,9 @@ public:
         e = e + email[k]; 
         i++;
     }
-        ofstream fout(s+".txt");
+    string x = "";
+    x+".txt";
+        ofstream fout(x);
         fout << s << "\n" << d << "\n" << e << "\n";
         fout.close();
     }
