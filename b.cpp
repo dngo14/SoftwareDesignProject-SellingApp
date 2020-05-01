@@ -13,13 +13,13 @@ public:
         description = new char [180];
         email = new char[20];
     for (int i = 0; i < 20; i++) {
-            name[i] = NULL;
+            name[i] = '\0';
     }
     for (int i = 0; i < 180; i++) {
-            description[i] = NULL;
+            description[i] = '\0';
     }
     for (int i = 0; i < 20; i++) {
-            email[i] = NULL;
+            email[i] = '\0';
     }
     }
 
@@ -58,19 +58,19 @@ public:
 
      string s = ""; 
      int i=0;
-     while (name[i]!='0') { 
+     while (name[i]!='\0') { 
          s = s + name[i]; 
          i++;
      } 
      string d = ""; 
      int j=0;
-     while (description[j]!='0') { 
+     while (description[j]!='\0') { 
          d = d + description[j]; 
          j++;
      } 
      string e = ""; 
      int k=0;
-     while (email[k]!='0') { 
+     while (email[k]!='\0') { 
          e = e + email[k]; 
          k++;
     }
