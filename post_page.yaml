@@ -12,31 +12,50 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: white
                     fontSize: 50
                     position: absolute
                     left: 40%
                     top: 10%
                   index: 130
-              - View:
+              - Button:
+                  id: profilepage
                   style:
-                    width: 50
-                    height: 50
+                    width: 66
+                    height: 66
                     backgroundColor: orange
                     borderRadius: 5
                     borderColor: black
                     position: absolute
                     left: 80%
                     top: 25%
-              - View:
-                  style: 
+                  children:
+                    - Text:
+                        style:
+                          color: black
+                          fontSize: 20
+                          position: absolute
+                          top: 20%
+                        index: 300
+              
+              
+      
+              - Button:
+                  id: mainpage
+                  style:
                     width: 50
                     height: 30
-                    backgroundColor: red
-                    position: absolute
-                    left: 5%
+                    position: absolute 
                     top: 50
-
+                    backgroundColor: red
+                  children:
+                    - Text:
+                        style:
+                          color: black
+                          fontSize: 20
+                          position: absolute
+                          left: 10
+                        index: 310
                     
         - View:
             style:
@@ -83,7 +102,7 @@
               top: 10
             children:
               - TextInput:
-                  index: 260
+                  index: 262
                   len: 80
                   style:
                     postion: absolute
@@ -93,11 +112,24 @@
                     backgroundColor: 'white'
                     borderColor: 'gray'
                     borderWidth: 1
-        - View:
-            style: 
-              width: 77
-              height: 77
-              backgroundColor: blue
-              osition: absolute
+
+        - Button:
+            id: mainpage
+            style:
+              width: 66
+              height: 66
+              backgroundColor: darkblue
+              borderRadius: 5
+              borderColor: black
+              position: absolute
               left: 45%
-              top: 30%
+              top: 50%
+            children:
+              - Text:
+                  style:
+                    color: orange
+                    fontSize: 20
+                    position: absolute
+                    top: 28%
+                    left: 20%
+                  index: 130

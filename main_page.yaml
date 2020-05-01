@@ -29,12 +29,23 @@
                     backgroundColor: darkblue
                     top: 0%
                   children:
-                    - Text:
-                        index: 40
-                        style:
-                          color: white
-                          fontSize: 20
-
+                  - Button:
+                      id: postpage
+                      style:
+                        width: 66
+                        height: 66
+                        top: 50
+                        left: 50
+                        backgroundColor: black
+                      children:
+                          - Text:
+                              style:
+                                color: white
+                                fontSize: 20
+                                left: 10
+                                top: 13
+                              index: 40
+         
               - View:
                   style:
                     width: 100%
@@ -42,11 +53,23 @@
                     backgroundColor: darkblue
                     top: 5%
                   children:
-                    - Text:
-                        index: 50
-                        style:
-                          color: white
-                          fontSize: 20                   
+                  - Button:
+                      id: order_history_page
+                      style:
+                        width: 66
+                        height: 66
+                        top: 50
+                        left: 50
+                        backgroundColor: black
+                      children:
+                          - Text:
+                              style:
+                                color: white
+                                fontSize: 20
+                                left: 10
+                                top: 13
+                              index: 50
+               
               - View:
                   style:
                     width: 100%

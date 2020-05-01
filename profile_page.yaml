@@ -24,14 +24,23 @@
                     backgroundColor: orange
                     position: absolute
                     left: 75%
-              - View:
-                  style: 
+              - Button:
+                  id: mainpage
+                  style:
                     width: 50
                     height: 30
-                    backgroundColor: red
-                    position: absolute
-                    left: 5%
+                    position: absolute 
                     top: 50%
+                    backgroundColor: red
+                  children:
+                    - Text:
+                        style:
+                          color: black
+                          fontSize: 20
+                          position: absolute
+                          left: 20%
+                          top: 20%
+                        index: 310
         - View:
             style:
               width: 100%

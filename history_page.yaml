@@ -18,24 +18,45 @@
                     left: 40%
                     top: 10%
                   index: 200
-              - View:
+              - Button:
+                  id: profilepage
                   style:
-                    width: 50
-                    height: 50
+                    width: 66
+                    height: 66
                     backgroundColor: orange
                     borderRadius: 5
                     borderColor: black
                     position: absolute
                     left: 80%
                     top: 25%
-              - View:
-                  style: 
+                  children:
+                    - Text:
+                        style:
+                          color: black
+                          fontSize: 20
+                          position: absolute
+                          top: 20%
+                        index: 300
+        
+
+              - Button:
+                  id: mainpage
+                  style:
                     width: 50
                     height: 30
-                    backgroundColor: red
-                    position: absolute
+                    position: absolute 
                     left: 5%
                     top: 50%
+                    backgroundColor: red
+                  children:
+                    - Text:
+                        style:
+                          color: black
+                          fontSize: 20
+                          position: absolute
+                          left: 10
+                        index: 310
+
         - View:
             style:
               width: 100%
