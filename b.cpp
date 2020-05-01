@@ -73,7 +73,7 @@ public:
         i++;
     }
     string x = "";
-    x+".txt";
+    x = s+".txt";
         ofstream fout(x);
         fout << s << "\n" << d << "\n" << e << "\n";
         fout.close();
