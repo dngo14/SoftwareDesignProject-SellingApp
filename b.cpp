@@ -64,17 +64,17 @@ public:
     int j=0;
     while (description[j]!='0') { 
         d = d + description[j]; 
-        i++;
+        j++;
     } 
     string e = ""; 
     int k=0;
     while (email[k]!='0') { 
         e = e + email[k]; 
-        i++;
+        k++;
     }
     string x = "";
     x = s+".txt";
-        ofstream fout(x);
+        ofstream fout("Tets.txt");
         fout << s << "\n" << d << "\n" << e << "\n";
         fout.close();
     }
