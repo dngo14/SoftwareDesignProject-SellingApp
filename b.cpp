@@ -38,15 +38,15 @@ public:
             }
         }
         for (int i = 100; i < 280; i++) {
-            char v = get_char_at(i);
-            if (v!='~') {
-                description[i] = v;
+            char b = get_char_at(i);
+            if (b!='~') {
+                description[i] = b;
             }
         }
         for (int i = 300; i < 320; i++) {
-            char v = get_char_at(i);
-            if (v!='~') {
-                email[i] = v;
+            char n = get_char_at(i);
+            if (n!='~') {
+                email[i] = n;
             }
         }
 
@@ -83,7 +83,7 @@ public:
     string e(email);
 
         ofstream fout("Test.txt");
-        fout << s << "\n" << s << "\n" << s << "\n";
+        fout << s << "\n" << d << "\n" << e << "\n";
         fout.close();
     }
 
