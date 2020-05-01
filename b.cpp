@@ -36,13 +36,13 @@ public:
                 name[i] = v;
             }
         }
-        for (int i = 99; i < 280; i++) {
+        for (int i = 100; i < 280; i++) {
             char v = get_char_at(i);
             if (v!='~') {
                 description[i] = v;
             }
         }
-        for (int i = 299; i < 320; i++) {
+        for (int i = 300; i < 320; i++) {
             char v = get_char_at(i);
             if (v!='~') {
                 email[i] = v;
@@ -84,6 +84,9 @@ public:
         fout << s << "\n" << d << "\n" << e << "\n";
         fout.close();
     }
+    void display() {
+        cout << name << endl << description << endl << email << endl;
+    }
  };
 
 
@@ -98,9 +101,9 @@ int main() {
   else if (received_event()) {
       Post p1{};
       p1.store();
+      p1.display();
       add_yaml("success.yaml");
   }
   add_yaml("input.yaml");
-
   quit();
 }
