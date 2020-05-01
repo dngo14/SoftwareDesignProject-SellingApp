@@ -13,13 +13,13 @@ public:
         description = new char [180];
         email = new char[20];
     for (int i = 0; i < 20; i++) {
-            name[i] = '0';
+            name[i] = NULL;
     }
     for (int i = 0; i < 180; i++) {
-            description[i] = '0';
+            description[i] = NULL;
     }
     for (int i = 0; i < 20; i++) {
-            email[i] = '0';
+            email[i] = NULL;
     }
     }
 
@@ -56,55 +56,35 @@ public:
             }
     }
 
-    // string s = ""; 
-    // int i=0;
-    // while (name[i]!='0') { 
-    //     s = s + name[i]; 
-    //     i++;
-    // } 
-    // string d = ""; 
-    // int j=0;
-    // while (description[j]!='0') { 
-    //     d = d + description[j]; 
-    //     j++;
-    // } 
-    // string e = ""; 
-    // int k=0;
-    // while (email[k]!='0') { 
-    //     e = e + email[k]; 
-    //     k++;
-    // }
+     string s = ""; 
+     int i=0;
+     while (name[i]!='0') { 
+         s = s + name[i]; 
+         i++;
+     } 
+     string d = ""; 
+     int j=0;
+     while (description[j]!='0') { 
+         d = d + description[j]; 
+         j++;
+     } 
+     string e = ""; 
+     int k=0;
+     while (email[k]!='0') { 
+         e = e + email[k]; 
+         k++;
+    }
     // string x = "";
     // x = s+".txt";
-    string s(name);
-    string d(description);
-    string e(email);
+    // string s(name);
+    // string d(description);
+    // string e(email);
 
         ofstream fout("Test.txt");
         fout << s << "\n" << d << "\n" << e << "\n";
         fout.close();
     }
-    void display() {
-        int i = 0;
-        while (name[i]!='0') {
-            cout << name[i];
-            i++;
-        }
-        i = 0;
-        cout << endl;
-        while (description[i]!='0') {
-            cout << description[i];
-            i++;
-        }
-        i = 0;
-        cout << endl;
-        while (email[i]!='0') {
-            cout << email[i];
-            i++;
-        }
-    }
- };
-
+};
 
 int main() {
   init();
@@ -117,7 +97,6 @@ int main() {
   else if (received_event()) {
       Post p1{};
       p1.store();
-      p1.display();
       add_yaml("success.yaml");
   }
   add_yaml("input.yaml");
