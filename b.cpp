@@ -87,32 +87,32 @@ using namespace std;
 // };
 
 void read_global() {
+    string a = "";
+    string b = "";
+    string c = "";
     ofstream fout("Test.txt");
              for (int i = 0; i < 20; i++) {
              char v = get_char_at(i);
              if (v!='~') {
-                 cout << v;
-                 fout << v;
+                 a = a+v;
              }
-             cout << endl;
+             fout << a;
              fout << endl;
          }
          for (int i = 100; i < 280; i++) {
              char v = get_char_at(i);
              if (v!='~') {
-                 cout << v;
-                 fout << v;
+                 b = b+v;
              }
-             cout << endl;
+             fout << b;
              fout << endl;
          }
          for (int i = 300; i < 320; i++) {
              char v = get_char_at(i);
              if (v!='~') {
-                 cout << v;
-                 fout << v;
+                 c = c+v;
              }
-             cout << endl;
+             fout << c;
              fout << endl;
          }
 
@@ -135,7 +135,7 @@ int main() {
       print_at(300, "");
   }
   else if (received_event()) {
-        read_global();
+      read_global();
       add_yaml("success.yaml");
   }
   add_yaml("input.yaml");
