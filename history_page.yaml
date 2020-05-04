@@ -12,7 +12,7 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: white
                     fontSize: 50
                     position: absolute
                     left: 40%
@@ -66,10 +66,9 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: white
                     fontSize: 50
                     position: absolute
                     top: 20%
                     left: 25%
-        
                   index: 100

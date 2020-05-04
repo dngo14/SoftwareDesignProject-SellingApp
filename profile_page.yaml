@@ -12,7 +12,7 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: white
                     fontSize: 50
                     position: absolute
                     left: 30%
@@ -24,6 +24,14 @@
                     backgroundColor: orange
                     position: absolute
                     left: 75%
+              - Text:
+                  style:
+                    color: black
+                    fontSize: 28
+                    position: absolute
+                    left: 75%
+                  index: 350
+            
               - Button:
                   id: mainpage
                   style:
@@ -50,7 +58,7 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: gold
                     fontSize: 50
                   index: 275
         - View:
@@ -62,7 +70,7 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: gold
                     fontSize: 50
                   index: 290
         - View:
@@ -74,6 +82,6 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: gold
                     fontSize: 50
                   index: 210

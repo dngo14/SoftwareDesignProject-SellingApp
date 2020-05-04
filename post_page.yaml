@@ -17,7 +17,7 @@
                     position: absolute
                     left: 40%
                     top: 10%
-                  index: 130
+                  index: 170
               - Button:
                   id: profilepage
                   style:
@@ -132,4 +132,4 @@
                     position: absolute
                     top: 28%
                     left: 20%
-                  index: 130
+                  index: 170

@@ -13,13 +13,14 @@
               - Text:
                   index: 3
                   style:
-                    left: 50%
-                    color: white
+                    position: absolute
+                    left: 5%
+                    color: gold
                     fontSize: 50
         - View:
             style:
               width: 20%
-              height: 70%
+              height: 100%
               backgroundColor: black
             children:
               - View:
@@ -32,8 +33,8 @@
                   - Button:
                       id: postpage
                       style:
-                        width: 66
-                        height: 66
+                        width: 77
+                        height: 77
                         top: 50
                         left: 50
                         backgroundColor: black
@@ -41,9 +42,10 @@
                           - Text:
                               style:
                                 color: white
-                                fontSize: 20
-                                left: 10
-                                top: 13
+                                fontSize: 22
+                                position: absolute
+                                left: 20%
+                                top: 28%
                               index: 40
          
               - View:
@@ -51,13 +53,13 @@
                     width: 100%
                     height: 30%
                     backgroundColor: darkblue
-                    top: 5%
+                    top: 0%
                   children:
                   - Button:
                       id: order_history_page
                       style:
-                        width: 66
-                        height: 66
+                        width: 77
+                        height: 77
                         top: 50
                         left: 50
                         backgroundColor: black
@@ -65,9 +67,10 @@
                           - Text:
                               style:
                                 color: white
+                                position: absolute
                                 fontSize: 20
-                                left: 10
-                                top: 13
+                                left: 10%
+                                top: 12%
                               index: 50
                
               - View:
@@ -75,28 +78,34 @@
                     width: 100%
                     height: 30%
                     backgroundColor: darkblue
-                    top: 10%
+                    top: 0%
                   children:
-                    - Text:
-                        index: 70
-                        style:
-                          color: white
-                          fontSize: 20
+                  - Button:
+                      id: likespage
+                      style:
+                        width: 77
+                        height: 77
+                        top: 50
+                        left: 50
+                        backgroundColor: black
+                      children:
+                          - Text:
+                              style:
+                                color: white
+                                position: absolute
+                                fontSize: 20
+                                top: 15%
+                              index: 70
+
         - Text:
             index: 100
             style:
               color: white
               fontSize: 30
               position: absolute  
-              top: 20% 
+              top: 5% 
               left: 40%
 
-        - View:
-                style:
-                  width: 80%
-                  height: 100%
-                  backgroundColor: white
-                  left: 20%
 
 
 

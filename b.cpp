@@ -12,16 +12,16 @@ public:
         name = new char [20];
         description = new char [180];
         email = new char[20];
-    /*for (int i = 0; i < 20; i++) {
-            name[i] = '0';
+    for (int i = 0; i < 20; i++) {
+            name[i] = '\0';
     }
     for (int i = 0; i < 180; i++) {
-            description[i] = '0';
+            description[i] = '\0';
     }
     for (int i = 0; i < 20; i++) {
-            email[i] = '0';
+            email[i] = '\0';
     }
-    */
+
     }
 
     ~Post() {
@@ -38,15 +38,15 @@ public:
             }
         }
         for (int i = 100; i < 280; i++) {
-            char b = get_char_at(i);
-            if (b!='~') {
-                description[i] = b;
+            char v = get_char_at(i);
+            if (v!='~') {
+                description[i] = v;
             }
         }
         for (int i = 300; i < 320; i++) {
-            char n = get_char_at(i);
-            if (n!='~') {
-                email[i] = n;
+            char v = get_char_at(i);
+            if (v!='~') {
+                email[i] = v;
             }
         }
 
@@ -57,30 +57,27 @@ public:
             }
     }
 
-    // string s = ""; 
-    // int i=0;
-    // while (name[i]!='0') { 
-    //     s = s + name[i]; 
-    //     i++;
-    // } 
-    // string d = ""; 
-    // int j=0;
-    // while (description[j]!='0') { 
-    //     d = d + description[j]; 
-    //     j++;
-    // } 
-    // string e = ""; 
-    // int k=0;
-    // while (email[k]!='0') { 
-    //     e = e + email[k]; 
-    //     k++;
-    // }
+     string s = ""; 
+     int i=0;
+     while (name[i]!='\0') { 
+         s = s + name[i]; 
+         i++;
+     } 
+     string d = ""; 
+     int j=0;
+     while (description[j]!='\0') { 
+         d = d + description[j]; 
+         j++;
+     } 
+     string e = ""; 
+     int k=0;
+     while (email[k]!='\0') { 
+         e = e + email[k]; 
+         k++;
+    }
     // string x = "";
     // x = s+".txt";
-    string s(name);
 
-    string d(description);
-    string e(email);
 
         ofstream fout("Test.txt");
         fout << s << "\n" << d << "\n" << e << "\n";
