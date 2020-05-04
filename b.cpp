@@ -96,25 +96,25 @@ void read_global() {
              if (v!='~') {
                  a = a+v;
              }
-             fout << a;
-             fout << endl;
          }
+         fout << a;
+        fout << endl;
          for (int i = 100; i < 280; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  b = b+v;
              }
-             fout << b;
-             fout << endl;
          }
+         fout << b;
+             fout << endl;
          for (int i = 300; i < 320; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  c = c+v;
              }
-             fout << c;
-             fout << endl;
          }
+         fout << c;
+             fout << endl;
 
          for (int i = 0; i < 320; i++) {
              char v = get_char_at(i);
