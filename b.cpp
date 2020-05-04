@@ -7,24 +7,6 @@ using namespace std;
 //     char *description;
 //     char *email;
 
-<<<<<<< HEAD
-public:
-    Post() {
-        name = new char [20];
-        description = new char [180];
-        email = new char[20];
-    for (int i = 0; i < 20; i++) {
-            name[i] = '\0';
-    }
-    for (int i = 0; i < 180; i++) {
-            description[i] = '\0';
-    }
-    for (int i = 0; i < 20; i++) {
-            email[i] = '\0';
-    }
-
-    }
-=======
 // public:
 //     Post() {
 //         name = new char [20];
@@ -40,7 +22,6 @@ public:
 //             email[i] = '\0';
 //     }
 //     }
->>>>>>> 1f0f7382350b3c6f3a15e865c1ac8e64143ba967
 
 //     ~Post() {
 //         delete [] name;
@@ -144,39 +125,6 @@ void read_global() {
      fout.close();
 }
 
-<<<<<<< HEAD
-     string s = ""; 
-     int i=0;
-     while (name[i]!='\0') { 
-         s = s + name[i]; 
-         i++;
-     } 
-     string d = ""; 
-     int j=0;
-     while (description[j]!='\0') { 
-         d = d + description[j]; 
-         j++;
-     } 
-     string e = ""; 
-     int k=0;
-     while (email[k]!='\0') { 
-         e = e + email[k]; 
-         k++;
-    }
-    // string x = "";
-    // x = s+".txt";
-
-
-        ofstream fout("Test.txt");
-        fout << s << "\n" << d << "\n" << e << "\n";
-        fout.close();
-    }
-
- };
-
-=======
-
->>>>>>> 1f0f7382350b3c6f3a15e865c1ac8e64143ba967
 
 int main() {
   init();
