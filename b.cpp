@@ -106,26 +106,33 @@ public:
 // };
 
 void read_global() {
+    ofstream fout("Test.txt");
              for (int i = 0; i < 20; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  cout << v;
+                 fout << v;
              }
              cout << endl;
+             fout << endl;
          }
          for (int i = 100; i < 280; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  cout << v;
+                 fout << v;
              }
              cout << endl;
+             fout << endl;
          }
          for (int i = 300; i < 320; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  cout << v;
+                 fout << v;
              }
              cout << endl;
+             fout << endl;
          }
 
          for (int i = 0; i < 320; i++) {
@@ -134,6 +141,7 @@ void read_global() {
                  put_char_at(i, '~');
              }
      }  
+     fout.close();
 }
 
 <<<<<<< HEAD
