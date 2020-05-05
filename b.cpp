@@ -91,7 +91,10 @@ void read_global() {
     string b = "";
     string c = "";
     string d = "";
-    ofstream fout("Test.txt",ios::app);
+    ofstream fout;
+    ifstream fin;
+    fin.open("Test.txt");
+    fout.open("Test.txt",ios::app);
              for (int i = 1000; i < 1020; i++) {
              char v = get_char_at(i);
              if (v!='~') {
@@ -122,7 +125,10 @@ void read_global() {
                  put_char_at(i, '~');
              }
      }
-    fout << a << d << b << c << "\n";
+    if(fin.is_open()) {
+        fout << a << d << b << c << "\n";
+    }
+    fin.close();
     fout.close();
 }
 
