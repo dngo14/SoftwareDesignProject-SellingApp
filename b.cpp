@@ -90,8 +90,9 @@ void read_global() {
     string a = "";
     string b = "";
     string c = "";
+    string d = "";
     ofstream fout("Test.txt");
-             for (int i = 0; i < 20; i++) {
+             for (int i = 1000; i < 1020; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  a = a+v;
@@ -99,7 +100,15 @@ void read_global() {
          }
          fout << a;
         fout << endl;
-         for (int i = 100; i < 280; i++) {
+        for (int i = 1020; i < 1040; i++) {
+             char v = get_char_at(i);
+             if (v!='~') {
+                 d = d+v;
+             }
+         }
+         fout << d;
+        fout << endl;
+         for (int i = 1100; i < 1280; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  b = b+v;
@@ -107,7 +116,7 @@ void read_global() {
          }
          fout << b;
              fout << endl;
-         for (int i = 300; i < 320; i++) {
+         for (int i = 1300; i < 1320; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  c = c+v;
@@ -116,7 +125,7 @@ void read_global() {
          fout << c;
              fout << endl;
 
-         for (int i = 0; i < 320; i++) {
+         for (int i = 1000; i < 1320; i++) {
              char v = get_char_at(i);
              if(v!='~') {
                  put_char_at(i, '~');
