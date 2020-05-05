@@ -110,8 +110,6 @@ void read_global() {
                  b = b+v;
              }
          }
-         fout << b;
-             fout << endl;
          for (int i = 1300; i < 1320; i++) {
              char v = get_char_at(i);
              if (v!='~') {
