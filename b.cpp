@@ -91,23 +91,19 @@ void read_global() {
     string b = "";
     string c = "";
     string d = "";
-    ofstream fout("Test.txt");
+    ofstream fout("Test.txt",ios::app);
              for (int i = 1000; i < 1020; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  a = a+v;
              }
          }
-         fout << a;
-        fout << endl;
         for (int i = 1020; i < 1040; i++) {
              char v = get_char_at(i);
              if (v!='~') {
                  d = d+v;
              }
          }
-         fout << d;
-        fout << endl;
          for (int i = 1100; i < 1280; i++) {
              char v = get_char_at(i);
              if (v!='~') {
@@ -122,16 +118,14 @@ void read_global() {
                  c = c+v;
              }
          }
-         fout << c;
-             fout << endl;
-
          for (int i = 1000; i < 1320; i++) {
              char v = get_char_at(i);
              if(v!='~') {
                  put_char_at(i, '~');
              }
-     }  
-     fout.close();
+     }
+    fout << a << d << b << c << "\n";
+    fout.close();
 }
 
 
