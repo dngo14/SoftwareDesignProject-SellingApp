@@ -1,36 +1,55 @@
 #include"react.h"
 #include <fstream>
+#include <string>
+#include <iostream>
 using namespace std;
 
 bool enter;
+char nstate;
+
 void check_login() {
-    string name = "UandP.txt";
-    ifstream f(name.c_str());
-    
-    string user ="";
-    string pass ="";
-    for (int i = 700; i < 720; i++) {
-             char v = get_char_at(i);
-             if (v!='~') {
-                 user = user+v;
-             }
-         }
-    for (int i = 10; i < 19; i++) {
-        char v = get_char_at(i);
-         if (v!='~') {
-            pass = pass+v;
-             }
-         }
-         string nuser = "";
-         string npass = "";
-    while (getline(f, nuser)) {
-        if (user == nuser) {
-            enter = true;
-        }
-        else {
-            enter = false;
-        }
+   string nuser = "";
+   string npass = "";
+     for (int i = 700; i < 719; ++i) {
+              char v;
+              v = get_char_at(i);
+              if (v!='~' && v!='\0') {
+                 nuser+=v;
+              }
+              else {
+                break;
+              }
+          }
+     for (int i = 719; i < 728; ++i) {
+         char v;
+         v = get_char_at(i);
+          if (v!='~' && v!='\0') {
+             npass+=v;
+              }
+            else {
+              break;
+            }
+          }
+
+    for (int i = 700; i < 728; ++i) {
+      put_char_at(i, '~');
     }
+
+    print_at(700, "");
+    print_at(719, "");
+
+     string username = "UandP.txt";
+     ifstream U(username.c_str());
+     string user ="";
+     string pass ="";
+  while (U >> user >> pass) { 
+     if (user == nuser && pass == npass) {
+       add_yaml("main_page.yaml");
+     }
+     else {
+      cerr << "Invalid Input";
+    }
+ }
 }
 
 void read_global() {
@@ -97,30 +116,23 @@ int main() {
   print_at(314, "Item               Description");
   print_at(350, "profile picture");
   print_at(370, "Success!!");
-  print_at(1000, "name");
-  print_at(1020, "price");
-  print_at(1100, "description");
-  print_at(1300, "email");
-  print_at(700, "user");
-  print_at(720, "pass");
-
   
 
   char state = get_char_at(2);
   if (just_starting()) {
+    print_at(700, "");
+  print_at(719, "");
     state = '0';
     put_char_at(2, state);
-
-    
   } else if (received_event()) {
     if (event_id_is("mainpage")) {
       check_login();
-      if (enter==true) {
-      state = '1';
-      put_char_at(2, state);
-      }
   } 
     else if (event_id_is("postpage")) {
+      print_at(1000, "");
+  print_at(1020, "");
+  print_at(1100, "");
+  print_at(1300, "");
       state = '2';
       put_char_at(2, state);
     }
