@@ -7,7 +7,7 @@
     index: 3
 
 - TextInput:
-    index: 10
+    index: 700
     len: 80
     style:
       width: 320
@@ -18,7 +18,7 @@
       borderWidth: 1
 
 - TextInput:
-    index: 19
+    index: 720
     len: 80
     style:
       width: 320
