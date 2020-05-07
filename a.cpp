@@ -1,4 +1,4 @@
-#include"../react.h"
+#include"react.h"
 
 int main() {
   init();
