@@ -65,7 +65,7 @@
               top: 10
             children:
               - TextInput:
-                  index: 240
+                  index: 1000
                   len: 80
                   style:
                     postion: absolute
@@ -83,7 +83,7 @@
               top: 10
             children:
               - TextInput:
-                  index: 250
+                  index: 1020
                   len: 80
                   style:
                     postion: absolute
@@ -102,7 +102,25 @@
               top: 10
             children:
               - TextInput:
-                  index: 262
+                  index: 1100
+                  len: 80
+                  style:
+                    postion: absolute
+                    width: 100%
+                    height: 100%
+                    fontSize: 20
+                    backgroundColor: 'white'
+                    borderColor: 'gray'
+                    borderWidth: 1
+        - View:
+            style:
+              width: 100%
+              height: 10%
+              backgroundColor: darkblue
+              top: 10
+            children:
+              - TextInput:
+                  index: 1300
                   len: 80
                   style:
                     postion: absolute
@@ -114,7 +132,7 @@
                     borderWidth: 1
 
         - Button:
-            id: mainpage
+            id: post
             style:
               width: 66
               height: 66
@@ -123,7 +141,7 @@
               borderColor: black
               position: absolute
               left: 45%
-              top: 50%
+              top: 66%
             children:
               - Text:
                   style:

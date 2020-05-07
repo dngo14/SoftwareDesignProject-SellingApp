@@ -2,16 +2,31 @@
       style:
         width: 100%
         height: 100%
-        backgroundColor: red
+        backgroundColor: darkblue
       children:
         - Text:
-            index: 500
+            index: 370
             style:
-              color: blue
-              fontSize: 400
+              color: gold
+              fontSize: 40
               position: absolute
               left: 40%
               top: 40%
-
+        - Button:
+            id: mainpage
+            style:
+              width: 50
+              height: 30
+              position: absolute 
+              top: 50
+              backgroundColor: red
+            children:
+               - Text:
+                  style:
+                    color: black
+                    fontSize: 20
+                    position: absolute
+                    left: 10
+                  index: 310
             
 
