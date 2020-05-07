@@ -12,7 +12,7 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: white
                     fontSize: 50
                     position: absolute
                     left: 30%
@@ -24,14 +24,31 @@
                     backgroundColor: orange
                     position: absolute
                     left: 75%
-              - View:
-                  style: 
+              - Text:
+                  style:
+                    color: black
+                    fontSize: 28
+                    position: absolute
+                    left: 75%
+                  index: 350
+            
+              - Button:
+                  id: mainpage
+                  style:
                     width: 50
                     height: 30
-                    backgroundColor: red
-                    position: absolute
-                    left: 5%
+                    position: absolute 
                     top: 50%
+                    backgroundColor: red
+                  children:
+                    - Text:
+                        style:
+                          color: black
+                          fontSize: 20
+                          position: absolute
+                          left: 20%
+                          top: 20%
+                        index: 310
         - View:
             style:
               width: 100%
@@ -41,7 +58,7 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: gold
                     fontSize: 50
                   index: 275
         - View:
@@ -53,7 +70,7 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: gold
                     fontSize: 50
                   index: 290
         - View:
@@ -65,6 +82,6 @@
             children:
               - Text:
                   style:
-                    color: black
+                    color: gold
                     fontSize: 50
                   index: 210

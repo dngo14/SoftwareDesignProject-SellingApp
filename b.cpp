@@ -133,7 +133,6 @@ void read_global() {
 }
 
 
-
 int main() {
   init();
   print_at(500, "Success!!");
