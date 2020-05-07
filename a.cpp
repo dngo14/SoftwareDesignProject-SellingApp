@@ -27,7 +27,7 @@ void check_login() {
             enter = true;
         }
         else {
-            enter = false;
+            enter = true;
         }
     }
 }
@@ -84,7 +84,8 @@ int main() {
   print_at(100, "Item                   Price                  Seller");
   print_at(170, "Post"); 
   print_at(200, "history");
-  print_at(210, "likes");
+  print_at(210, "logout");
+
   print_at(240, "Name");
   print_at(250, "Description");
   print_at(262, "Contact Info");
@@ -94,13 +95,13 @@ int main() {
   print_at(310, "<< ");
   print_at(314, "Item               Description");
   print_at(350, "profile picture");
-  print_at(370, "Success!!");
-  print_at(1000, "name");
-  print_at(1020, "price");
-  print_at(1100, "description");
-  print_at(1300, "email");
+  print_at(370, "Success!");
   print_at(700, "user");
   print_at(720, "pass");
+  print_at(390, "Item name:");
+  print_at(405, "Price:");
+  print_at(414, "Item description:");
+  print_at(435, "Your email:");
 
   
 
@@ -120,6 +121,10 @@ int main() {
   } 
     else if (event_id_is("postpage")) {
       state = '2';
+      print_at(1000, "");
+      print_at(1020, "");
+      print_at(1100, "");
+      print_at(1300, "");
       put_char_at(2, state);
     }
     else if (event_id_is("post")) {
