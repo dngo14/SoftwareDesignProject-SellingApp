@@ -4,8 +4,29 @@
 #include <iostream>
 using namespace std;
 
-bool enter;
-char nstate;
+void display() {
+    string username = "Test.txt";
+     ifstream dis(username.c_str());
+     string item ="";
+     string price ="";
+     string description ="";
+     string email="";
+     string end="";
+     int i = 2000;
+      while (getline(dis, item, '\0')) {
+        getline(dis, price, '\0');
+        getline(dis, description, '\0');
+        getline(dis, email, '\0');
+          print_at(i, item);
+          print_at(i+20, price);
+          print_at(i+100, description);
+          print_at(i+280, email);
+        i += 300;
+        if (getline(dis, end)=="/n") {
+          break;
+        }
+}
+}
 
 void check_login() {
    string nuser = "";
@@ -45,6 +66,7 @@ void check_login() {
   while (U >> user >> pass) { 
      if (user == nuser && pass == npass) {
        add_yaml("main_page.yaml");
+       display();
      }
      else {
        if (user != nuser && pass != npass) {
@@ -134,7 +156,8 @@ int main() {
   } else if (received_event()) {
     if (event_id_is("mainpage one")) {
       check_login();
-  } else if (received_event()) {
+    }
+    else if (event_id_is("mainpage")) {
       state = '1';
     put_char_at(2, state);
   }
@@ -171,7 +194,7 @@ int main() {
   }
 
   if ('0' == state) add_yaml("login_page.yaml");
-  else if('1' == state) add_yaml("main_page.yaml");
+  else if('1' == state) add_yaml("main_page.yaml"), display();
   else if('2' == state) add_yaml("post_page.yaml");
   else if('3'== state) add_yaml("profile_page.yaml");  
   else if('4' == state) add_yaml("history_page.yaml");
