@@ -47,8 +47,10 @@ void check_login() {
        add_yaml("main_page.yaml");
      }
      else {
+       if (user != nuser && pass != npass) {
       cerr << "Invalid Input";
     }
+     }
  }
 }
 
@@ -116,6 +118,11 @@ int main() {
   print_at(314, "Item               Description");
   print_at(350, "profile picture");
   print_at(370, "Success!!");
+  print_at(390, "Item");
+  print_at(405, "Price");
+  print_at(414, "Description");
+  print_at(435, "Email");
+
   
 
   char state = get_char_at(2);
@@ -130,9 +137,9 @@ int main() {
   } 
     else if (event_id_is("postpage")) {
       print_at(1000, "");
-  print_at(1020, "");
-  print_at(1100, "");
-  print_at(1300, "");
+      print_at(1020, "");
+      print_at(1100, "");
+      print_at(1300, "");
       state = '2';
       put_char_at(2, state);
     }
