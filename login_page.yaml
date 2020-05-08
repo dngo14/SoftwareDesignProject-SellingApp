@@ -27,11 +27,9 @@
       backgroundColor: 'white'
       borderColor: 'gray'
       borderWidth: 1
-      position: absolute
-      top: 100
 
 - Button:
-     id: mainpage
+     id: mainpage one
      style:
        width: 50
        height: 50

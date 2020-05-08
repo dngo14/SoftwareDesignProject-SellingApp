@@ -126,7 +126,7 @@
                     borderRadius: 5
                     borderColor: black
                     position: absolute
-                    left: 90%
+                    left: 94%
                     top: 0.7%
                   on_touch:
                     backgroundColor: gold
