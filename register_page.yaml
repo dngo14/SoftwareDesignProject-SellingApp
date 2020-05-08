@@ -1,0 +1,47 @@
+- Text:
+    style:
+      color: orange
+      fontSize: 50
+      right: 20
+      left: 20
+    index: 3
+
+- TextInput:
+    index: 800
+    len: 80
+    style:
+      width: 320
+      height: 30
+      fontSize: 20
+      backgroundColor: 'white'
+      borderColor: 'gray'
+      borderWidth: 1
+
+- TextInput:
+    index: 819
+    len: 80
+    style:
+      width: 320
+      height: 30
+      fontSize: 20
+      backgroundColor: 'white'
+      borderColor: 'gray'
+      borderWidth: 1
+
+- Button:
+     id: mainpage one
+     style:
+       width: 50
+       height: 50
+       top: 50
+       left: 50
+       backgroundColor: black
+     children:
+        - Text:
+            style:
+              color: orange
+              fontSize: 15
+              position: absolute
+              left: 10
+              top: 13
+            index: 28
