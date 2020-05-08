@@ -134,21 +134,15 @@ int main() {
   } else if (received_event()) {
     if (event_id_is("mainpage one")) {
       check_login();
-  } else if (received_event()) {
-      state = '1';
-    put_char_at(2, state);
-  }
+  } 
     else if (event_id_is("postpage")) {
-      print_at(1000, "");
-      print_at(1020, "");
-      print_at(1100, "");
-      print_at(1300, "");
       state = '2';
+      put_char_at(2, state);
       print_at(1000, "");
       print_at(1020, "");
       print_at(1100, "");
       print_at(1300, "");
-      put_char_at(2, state);
+
     }
     else if (event_id_is("post")) {
       read_global();
@@ -168,7 +162,12 @@ int main() {
       state = '5';
       put_char_at(2, state);
     }
+    else if (event_id_is("mainpage")) {
+      state = '1';
+      put_char_at(2, state);
   }
+  }
+  
 
   if ('0' == state) add_yaml("login_page.yaml");
   else if('1' == state) add_yaml("main_page.yaml");
