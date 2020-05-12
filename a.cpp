@@ -101,7 +101,6 @@ class Post {
     void display() {
     string username = "Items.txt";
      ifstream dis(username.c_str());
-     string item ="";
      int i = 2000;
       while (getline(dis, item, '\0')) {
         getline(dis, price, '\0');
@@ -155,12 +154,107 @@ void read_global() {
 
 };
 
-class User:public Login {
-  
+class Likes {
+  string item;
+  string price;
+  string description;
+  string email;
+  string end;
+
+public:
+  Likes() {
+    item ="";
+    price ="";
+    description ="";
+    email="";
+    end="";
+  }
+
+  void store_likes(int x) {
+    for (int i = x; i < x+20; i++) {
+          char v = get_char_at(i);
+          if (v!='~') {
+              item = item+v;
+          }
+         }
+        for (int i = x+20; i < x+40; i++) {
+             char v = get_char_at(i);
+             if (v!='~') {
+                 price = price+v;
+             }
+         }
+         for (int i = x+100; i < x+280; i++) {
+             char v = get_char_at(i);
+             if (v!='~') {
+                 description = description+v;
+             }
+         }
+         for (int i = x+280; i < x+300; i++) {
+             char v = get_char_at(i);
+             if (v!='~') {
+                 email = email+v;
+             }
+         }
+          ofstream fout("Likes.txt",ios::app);
+          fout << item << price << description << email << "\n";
+          fout.close();
+  }
+
+  void display() {
+    string username = "Likes.txt";
+     ifstream dis(username.c_str());
+     int i = 8000;
+      while (getline(dis, item, '\0')) {
+        getline(dis, price, '\0');
+        getline(dis, description, '\0');
+        getline(dis, email, '\0');
+          print_at(i, item);
+          print_at(i+20, price);
+          print_at(i+100, description);
+          print_at(i+280, email);
+        i += 300;
+        if (getline(dis, end)=="/n") {
+          break;
+        }
+}
+}
+
+void deletemem() {
+  for (int i = 8000; i < 10000; i++) {
+    char c = get_char_at(i);
+    if (c != '~') {
+    put_char_at(i, '~');
+    }
+  }
+}
+};
+
+class User:public Login, public Likes {
+  bool bexists;
+  bool lexists;
   public:
     User() {
-      std::ofstream outfile ("Bought.txt");
+      //Bexists();
+      //Lexists();
+      //if (bexists != false && lexists != false) {
+       // std::ofstream bfile ("Bought.txt");
+        //std::ofstream lfile ("Likes.txt");
+      //}
+      //else {
+
+      //}
     }
+
+//   bool Bexists() {
+//   ifstream bexists("Bought.txt");
+//   return bexists;
+// }
+//   bool Lexists() {
+//   ifstream lexists("Likes.txt");
+//   return lexists;
+// }
+
+
 };
 
 
@@ -174,7 +268,7 @@ int main() {
   print_at(28, "login");
   print_at(40, "post");
   print_at(50, "order");
-  print_at(70, "favorites");
+  print_at(70, "Likes");
   print_at(100, "Item                   Price                  Seller");
   print_at(170, "Post"); 
   print_at(200, "history");
@@ -211,6 +305,7 @@ int main() {
     if (event_id_is("mainpage one")) {
       Danny.check_login();
       Post.display();
+
     }
     else if (event_id_is("create")) {
       Danny.create_account();
@@ -237,6 +332,7 @@ int main() {
     else if (event_id_is("profilepage")) {
       state = '3';
       put_char_at(2, state);
+      Danny.display();
     }
     else if (event_id_is("order_history_page")) {
       state = '4';
@@ -249,7 +345,13 @@ int main() {
     else if (event_id_is("mainpage")) {
       state = '1';
       put_char_at(2, state);
+      Danny.deletemem();
   }
+    else if (event_id_is("one")) {
+      Danny.store_likes(2000);
+      state = '5';
+      put_char_at(2, state);
+    }
   }
   
 
@@ -258,7 +360,7 @@ int main() {
   else if('2' == state) add_yaml("post_page.yaml");
   else if('3'== state) add_yaml("profile_page.yaml");  
   else if('4' == state) add_yaml("history_page.yaml");
-  else if('5' == state) add_yaml("likes_pages.yaml");
+  else if('5' == state) add_yaml("likes_pages.yaml"), Danny.display();
   else if('6' == state) add_yaml("success.yaml");
 
   quit();

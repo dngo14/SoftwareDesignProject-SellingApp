@@ -14,7 +14,6 @@
                   index: 3
                   style:
                     position: absolute
-                    left: 5%
                     color: orange
                     fontSize: 50
         - View:
@@ -47,8 +46,8 @@
                                 color: orange 
                                 fontSize: 28
                                 position: absolute
-                                left: 20%
-                                top: 28%
+                                left: 15%
+                                top: 20%
                               index: 40
 
          
@@ -76,8 +75,8 @@
                                 color: orange
                                 position: absolute
                                 fontSize: 28
-                                left: 10%
-                                top: 12%
+                                left: 8%
+                                top: 14%
                               index: 50
                
               - View:
@@ -106,6 +105,7 @@
                                 position: absolute
                                 fontSize: 28
                                 top: 15%
+                                left: 7%
                               index: 70
 
 
@@ -116,7 +116,7 @@
               fontSize: 30
               position: absolute  
               top: 5% 
-              left: 40%
+              left: 33%
         - Button:
                   id: profilepage
                   style:
@@ -157,12 +157,13 @@
                           flex: 1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          height: 200 
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -180,7 +181,8 @@
                                     index: 2100
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -189,11 +191,12 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 2020
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -204,20 +207,30 @@
                                       color: orange
                                       fontSize: 20
                                     index: 2280
-
-
+                                - Button:
+                                    id: one
+                                    style:
+                                      width: 66
+                                      height: 66
+                                      backgroundColor: rgb(39, 22, 99)
+                                      borderRadius: 5
+                                      borderColor: black
+                                      position: absolute
+                                      top: 50%
+                                    on_touch: purple
 
                     - View:
                         style:
                           flex: 1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          height: 200 
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -235,7 +248,8 @@
                                     index: 2400
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -248,7 +262,8 @@
                                     index: 2320
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -265,12 +280,13 @@
                           flex: 1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          height: 200 
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -288,7 +304,8 @@
                                     index: 2700
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -301,7 +318,8 @@
                                     index: 2620
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -318,12 +336,13 @@
                           flex: 1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          height: 200 
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -341,7 +360,8 @@
                                     index: 3000
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -354,7 +374,8 @@
                                     index: 2920
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -371,12 +392,13 @@
                           flex: 1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          height: 200 
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -394,7 +416,8 @@
                                     index: 3300
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -407,7 +430,8 @@
                                     index: 3220
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -424,12 +448,13 @@
                           flex: 1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          height: 200 
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -447,7 +472,8 @@
                                     index: 3600
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
@@ -460,7 +486,8 @@
                                     index: 3520
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
                                 borderWidth: 1
