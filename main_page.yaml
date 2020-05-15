@@ -14,7 +14,6 @@
                   index: 3
                   style:
                     position: absolute
-                    left: 5%
                     color: orange
                     fontSize: 50
         - View:
@@ -47,8 +46,13 @@
                                 color: orange 
                                 fontSize: 33
                                 position: absolute
+<<<<<<< HEAD
                                 left: 18%
                                 top: 26%
+=======
+                                left: 15%
+                                top: 20%
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253
                               index: 40
 
          
@@ -76,8 +80,13 @@
                                 color: orange
                                 position: absolute
                                 fontSize: 28
+<<<<<<< HEAD
                                 left: 10%
                                 top: 16%
+=======
+                                left: 8%
+                                top: 14%
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253
                               index: 50
                
               - View:
@@ -105,7 +114,12 @@
                                 color: orange
                                 position: absolute
                                 fontSize: 28
+<<<<<<< HEAD
                                 top: 25%
+=======
+                                top: 15%
+                                left: 7%
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253
                               index: 70
 
 
@@ -117,6 +131,7 @@
               position: absolute  
               top: 5% 
               left: 33%
+<<<<<<< HEAD
         - Text:
             index: 110
             style:
@@ -133,6 +148,8 @@
               position: absolute  
               top: 5% 
               left: 80%
+=======
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253
         - Button:
                   id: profilepage
                   style:
@@ -166,23 +183,24 @@
               - ScrollView:
                   style:
                     width: 100%
-                    backgroundColor: '#eeeeee'
+                    backgroundColor: rgb(75,0,130)
                   children:
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          borderWidth: 1
+                          borderColor: black
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -196,24 +214,25 @@
                                     index: 2100
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                               
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 2020
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                flex: 1   
+
                               children:
                                 - Text:
                                     style:
@@ -221,6 +240,7 @@
                                       fontSize: 20
                                     index: 2280
                                 - Button:
+<<<<<<< HEAD
                                     id: order
                                     style:
                                       width: 40
@@ -233,31 +253,52 @@
                                       top: 0.1%
                                     on_touch:
                                       backgroundColor: orange
+=======
+                                    id: one
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: red
+                                      borderRadius: 5
+                                      borderColor: black
+                                      top: 5
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253
                                     children:
                                       - Text:
                                           style:
                                             color: black
                                             fontSize: 16
+<<<<<<< HEAD
                                             position: absolute
                                             top: 20%
                                           index: 475
 
+=======
+                                          index: 473
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
+<<<<<<< HEAD
                           height: 200
                           backgroundColor: rgb(50, 39, 99)
+=======
+                          borderWidth: 1
+                          borderColor: black
+                          backgroundColor: rgb(77, 66, 111)
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                               
                               children:
                                 - Text:
                                     style:
@@ -271,46 +312,68 @@
                                     index: 2400
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 2320
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                               
                               children:
                                 - Text:
                                     style:
                                       color: orange
                                       fontSize: 20
                                     index: 2580
+                                - Button:
+                                    id: two
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: red
+                                      borderRadius: 5
+                                      borderColor: black
+                                      top: 5
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 473
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
+<<<<<<< HEAD
                           height: 200
                           backgroundColor: rgb(66, 49, 99)
+=======
+                          borderWidth: 1
+                          borderColor: black
+                          backgroundColor: rgb(77, 66, 111)
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -324,46 +387,63 @@
                                     index: 2700
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 2620
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
                                       fontSize: 20
                                     index: 2880
+                                - Button:
+                                    id: three
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: red
+                                      borderRadius: 5
+                                      borderColor: black
+                                      top: 5
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 473
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          borderWidth: 1
+                          borderColor: black
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -377,46 +457,63 @@
                                     index: 3000
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                               
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 2920
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                               
                               children:
                                 - Text:
                                     style:
                                       color: orange
                                       fontSize: 20
                                     index: 3180
+                                - Button:
+                                    id: four
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: red
+                                      borderRadius: 5
+                                      borderColor: black
+                                      top: 5
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 473
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
+                          borderWidth: 1
+                          borderColor: black
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -430,46 +527,63 @@
                                     index: 3300
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 3220
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
                                       fontSize: 20
                                     index: 3480
+                                - Button:
+                                    id: five
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: red
+                                      borderRadius: 5
+                                      borderColor: black
+                                      top: 5
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 473
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200
                           backgroundColor: rgb(77, 66, 111)
+                          borderWidth: 1
+                          borderColor: black
                         children:
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -483,31 +597,46 @@
                                     index: 3600
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 3520
                           - View:
                               style:
-                                width: 33%
+                                alignItems: 'center'
+                                width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
                                       fontSize: 20
                                     index: 3780
-
+                                - Button:
+                                    id: six
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: red
+                                      borderRadius: 5
+                                      borderColor: black
+                                      top: 5
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 473
 
 
 

@@ -197,11 +197,7 @@ class User:public Login {
         myfile.close();
         
     }
-void delete_line() 
-{ 
 
-} 
-  
 
 };
 
@@ -313,7 +309,7 @@ int main() {
   
 
   if ('0' == state) add_yaml("login_page.yaml");
-  else if('1' == state) add_yaml("main_page.yaml"),Post.display();;
+  else if('1' == state) add_yaml("main_page.yaml"),Post.display();
   else if('2' == state) add_yaml("post_page.yaml");
   else if('3'== state) add_yaml("profile_page.yaml");  
   else if('4' == state) add_yaml("history_page.yaml");
