@@ -71,5 +71,21 @@
                     fontSize: 50
                     position: absolute
                     top: 20%
-                    left: 25%
+                    left: 15%
                   index: 100
+              - Text:
+                  index: 110
+                  style:
+                    color: orange
+                    fontSize: 50
+                    position: absolute  
+                    top: 20% 
+                    left: 45%
+              - Text:
+                  index: 120
+                  style:
+                    color: orange
+                    fontSize: 50
+                    position: absolute  
+                    top: 20% 
+                    left: 75%              

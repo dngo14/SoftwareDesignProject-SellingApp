@@ -1,50 +1,82 @@
-- Text:
-    style:
-      color: orange
-      fontSize: 50
-      right: 20
-      left: 20
-    index: 3
-
-- TextInput:
-    index: 700
-    len: 80
-    style:
-      width: 320
-      height: 30
-      fontSize: 20
-      backgroundColor: 'white'
-      borderColor: 'gray'
-      borderWidth: 1
-
-- TextInput:
-    index: 719
-    len: 80
-    style:
-      width: 320
-      height: 30
-      fontSize: 20
-      backgroundColor: 'white'
-      borderColor: 'gray'
-      borderWidth: 1
-
-- Button:
-     id: mainpage one
-     style:
-       width: 50
-       height: 50
-       top: 50
-       left: 50
-       backgroundColor: black
-     children:
+- View:
+      style:
+        width: 100%
+        height: 100%
+        backgroundColor: white
+      children:
         - Text:
             style:
               color: orange
-              fontSize: 15
+              fontSize: 50
               position: absolute
-              left: 10
-              top: 13
-            index: 28
+              left: 36%
+              top: 15%
+            index: 3
+        - Text:
+            style:
+              color: black
+              fontSize: 20
+              position: absolute
+              left: 23%
+              top: 25%
+            index: 450
+        - Text:
+            style:
+              color: black
+              fontSize: 20
+              position: absolute
+              left: 23%
+              top: 30%
+            index: 460     
+        - TextInput:
+            index: 700
+            len: 80
+            style:
+              width: 320
+              height: 30
+              position: absolute
+              left: 30%
+              top: 25%
+              fontSize: 20
+              backgroundColor: 'white'
+              borderColor: 'gray'
+              borderWidth: 1
+
+        - TextInput:
+            index: 719
+            len: 80
+            style:
+              width: 320
+              height: 30
+              fontSize: 20
+              position: absolute
+              top: 30%
+              left: 30%
+              backgroundColor: 'white'
+              borderColor: 'gray'
+              borderWidth: 1
+            extra_props:
+              secureTextEntry: true
+
+        - Button:
+            id: mainpage one
+            style:
+              width: 50
+              height: 50
+              top: 38%
+              left: 39%
+              backgroundColor: black
+            on_touch:
+              backgroundColor: gold
+            children:
+                - Text:
+                    style:
+                      color: orange
+                      fontSize: 15
+                      position: absolute
+                      left: 10
+                      top: 13
+                    index: 28
 
 
 

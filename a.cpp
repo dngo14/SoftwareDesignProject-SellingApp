@@ -4,6 +4,30 @@
 #include <iostream>
 using namespace std;
 
+void delete_display() {
+
+
+}
+void order() {
+    string username = "Test.txt";
+     ifstream dis(username.c_str());
+     string item ="";
+     string price ="";
+     string description ="";
+     string email="";
+     int i = 5000; //how to read a specific line???
+       getline(dis, item, '\0');
+        getline(dis, price, '\0');
+        getline(dis, description, '\0');
+        getline(dis, email, '\0');
+          print_at(i, item);
+          print_at(i+20, price);
+          print_at(i+100, description);
+          print_at(i+280, email);
+
+}
+
+
 void display() {
     string username = "Test.txt";
      ifstream dis(username.c_str());
@@ -81,6 +105,7 @@ void read_global() {
     string c = "";
     string d = "";
     ofstream fout("Test.txt",ios::app);
+    ofstream fout1("Test1.txt", ios::app);
              for (int i = 1000; i < 1020; i++) {
              char v = get_char_at(i);
              if (v!='~') {
@@ -112,7 +137,9 @@ void read_global() {
              }
      }
     fout << a << d << b << c << "\n";
+    fout1 << a << d << b << c << "\n";
     fout.close();
+    fout1.close();
 }
 
 
@@ -123,9 +150,11 @@ int main() {
   print_at(19, "");
   print_at(28, "login");
   print_at(40, "post");
-  print_at(50, "order");
+  print_at(50, "order history");
   print_at(70, "favorites");
-  print_at(100, "Item                   Price                  Seller");
+  print_at(100, "Item");
+  print_at(110, "Price");    
+  print_at(120, "Seller");
   print_at(170, "Post"); 
   print_at(200, "history");
   print_at(210, "logout");
@@ -143,6 +172,9 @@ int main() {
   print_at(405, "Price");
   print_at(414, "Description");
   print_at(435, "Email");
+  print_at(441, "order");
+  print_at(450, "username:");
+  print_at(460, "password:");
 
   
 
@@ -188,19 +220,30 @@ int main() {
       put_char_at(2, state);
     }
     else if (event_id_is("mainpage")) {
+      display();
       state = '1';
       put_char_at(2, state);
   }
+    else if (event_id_is("loginpage")) {
+      state = '0';
+      put_char_at(2,state);
+    }
+    else if (event_id_is("order")) {
+      order();
+      state = '7';
+      put_char_at(2,state);
+    }
   }
   
 
   if ('0' == state) add_yaml("login_page.yaml");
-  else if('1' == state) add_yaml("main_page.yaml"), display();
+  else if('1' == state) add_yaml("main_page.yaml");
   else if('2' == state) add_yaml("post_page.yaml");
   else if('3'== state) add_yaml("profile_page.yaml");  
   else if('4' == state) add_yaml("history_page.yaml");
   else if('5' == state) add_yaml("likes_pages.yaml");
   else if('6' == state) add_yaml("success.yaml");
+  else if ('7' == state) add_yaml("success.yaml");
 
   quit();
 }

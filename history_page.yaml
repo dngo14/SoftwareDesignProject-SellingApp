@@ -72,5 +72,384 @@
                     fontSize: 50
                     position: absolute
                     top: 20%
-                    left: 25%
+                    left: 15%
                   index: 100
+              - Text:
+                  index: 110
+                  style:
+                    color: orange
+                    fontSize: 50
+                    position: absolute  
+                    top: 20% 
+                    left: 45%
+              - Text:
+                  index: 120
+                  style:
+                    color: orange
+                    fontSize: 50
+                    position: absolute  
+                    top: 20% 
+                    left: 75%  
+
+
+
+
+
+
+
+        - View:
+            style:
+              width: 72%
+              height: 85%
+              position: absolute
+              top: 30%
+              left: 15%
+              backgroundColor: black
+            children:
+              - ScrollView:
+                  style:
+                    width: 100%
+                    backgroundColor: '#eeeeee'
+                  children:
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200
+                          backgroundColor: rgb(77, 66, 111)
+                        children:
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5000
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 5100
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5020
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5280
+                                - Button:
+                                    id: order_history_page
+                                    style:
+                                      width: 40
+                                      height: 30
+                                      backgroundColor: gold
+                                      borderRadius: 5
+                                      borderColor: black
+                                      position: absolute
+                                      left: 86%
+                                      top: 0.1%
+                                    on_touch:
+                                      backgroundColor: orange
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                            position: absolute
+                                            top: 20%
+                                          index: 441
+
+
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200
+                          backgroundColor: rgb(50, 39, 99)
+                        children:
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5300
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 5400
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5320
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5580
+
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200
+                          backgroundColor: rgb(66, 49, 99)
+                        children:
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5600
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 5700
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5620
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5880
+
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200
+                          backgroundColor: rgb(77, 66, 111)
+                        children:
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5900
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 6000
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 5920
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 6180
+
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200
+                          backgroundColor: rgb(77, 66, 111)
+                        children:
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 6200
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 6300
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 6220
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 6480
+
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200
+                          backgroundColor: rgb(77, 66, 111)
+                        children:
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 6500
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 6600
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 6520
+                          - View:
+                              style:
+                                width: 33%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 6780
+
+
+
