@@ -363,8 +363,29 @@ int main() {
       put_char_at(2, state);
       Danny.deletemem();
   }
+  
     else if (event_id_is("one")) {
       Danny.store_likes(2000);
+      state = '6';
+      put_char_at(2, state);
+    }else if (event_id_is("two")) {
+      Danny.store_likes(2300);
+      state = '6';
+      put_char_at(2, state);
+    }else if (event_id_is("three")) {
+      Danny.store_likes(2600);
+      state = '6';
+      put_char_at(2, state);
+    }else if (event_id_is("four")) {
+      Danny.store_likes(2900);
+      state = '6';
+      put_char_at(2, state);
+    }else if (event_id_is("five")) {
+      Danny.store_likes(3200);
+      state = '6';
+      put_char_at(2, state);
+    }else if (event_id_is("six")) {
+      Danny.store_likes(3500);
       state = '6';
       put_char_at(2, state);
     }
