@@ -4,57 +4,23 @@
 #include <iostream>
 using namespace std;
 
-void delete_display() {
+class Login {
+  string nuser;
+  string npass;
+  string user;
+  string pass;
+  string file;
 
+public:
+  Login () {
+  nuser = "";
+  npass = "";
+  user ="";
+  pass ="";
+  file = "UandP.txt";
+  }
 
-}
-void order() {
-    string username = "Test.txt";
-     ifstream dis(username.c_str());
-     string item ="";
-     string price ="";
-     string description ="";
-     string email="";
-     int i = 5000; //how to read a specific line???
-       getline(dis, item, '\0');
-        getline(dis, price, '\0');
-        getline(dis, description, '\0');
-        getline(dis, email, '\0');
-          print_at(i, item);
-          print_at(i+20, price);
-          print_at(i+100, description);
-          print_at(i+280, email);
-
-}
-
-
-void display() {
-    string username = "Test.txt";
-     ifstream dis(username.c_str());
-     string item ="";
-     string price ="";
-     string description ="";
-     string email="";
-     string end="";
-     int i = 2000;
-      while (getline(dis, item, '\0')) {
-        getline(dis, price, '\0');
-        getline(dis, description, '\0');
-        getline(dis, email, '\0');
-          print_at(i, item);
-          print_at(i+20, price);
-          print_at(i+100, description);
-          print_at(i+280, email);
-        i += 300;
-        if (getline(dis, end)=="/n") {
-          break;
-        }
-}
-}
-
-void check_login() {
-   string nuser = "";
-   string npass = "";
+  void check_login() {
      for (int i = 700; i < 719; ++i) {
               char v;
               v = get_char_at(i);
@@ -82,52 +48,98 @@ void check_login() {
 
     print_at(700, "");
     print_at(719, "");
-
-     string username = "UandP.txt";
-     ifstream U(username.c_str());
-     string user ="";
-     string pass ="";
-  while (U >> user >> pass) { 
+    ifstream U(file.c_str());
+  while (getline(U, user, '\0')) {
+     getline(U, pass, '\0'); 
      if (user == nuser && pass == npass) {
        add_yaml("main_page.yaml");
-       display();
        break;
      }
-     else {
-       
-    }
      }
 }
+void create_account() {
+    ofstream fout("UandP.txt",ios::app);
+     for (int i = 730; i < 740; i++) {
+             char v = get_char_at(i);
+             if (v!='~') {
+                 user = user+v;
+             }
+         }
+      for (int i = 740; i < 750; i++) {
+            char v = get_char_at(i);
+            if (v!='~') {
+                pass = pass+v;
+            }
+        }
+      fout << user << pass;
+      fout.close();
 
+      for (int i = 730; i < 750; ++i) {
+      put_char_at(i, '~');
+    }
+}
+
+
+};
+
+class Post {
+  string item;
+  string price;
+  string description;
+  string email;
+  string end;
+
+  public:
+    Post() {
+     item ="";
+     price ="";
+     description ="";
+     email="";
+     end="";
+    }
+    void display() {
+    string username = "Items.txt";
+     ifstream dis(username.c_str());
+     string item ="";
+     int i = 2000;
+      while (getline(dis, item, '\0')) {
+        getline(dis, price, '\0');
+        getline(dis, description, '\0');
+        getline(dis, email, '\0');
+          print_at(i, item);
+          print_at(i+20, price);
+          print_at(i+100, description);
+          print_at(i+280, email);
+        i += 300;
+        if (getline(dis, end)=="/n") {
+          break;
+        }
+}
+}
 void read_global() {
-    string a = "";
-    string b = "";
-    string c = "";
-    string d = "";
-    ofstream fout("Test.txt",ios::app);
-    ofstream fout1("Test1.txt", ios::app);
+    ofstream fout("Items.txt",ios::app);
              for (int i = 1000; i < 1020; i++) {
              char v = get_char_at(i);
              if (v!='~') {
-                 a = a+v;
+                 item = item+v;
              }
          }
         for (int i = 1020; i < 1040; i++) {
              char v = get_char_at(i);
              if (v!='~') {
-                 d = d+v;
+                 price = price+v;
              }
          }
          for (int i = 1100; i < 1280; i++) {
              char v = get_char_at(i);
              if (v!='~') {
-                 b = b+v;
+                 description = description+v;
              }
          }
          for (int i = 1300; i < 1320; i++) {
              char v = get_char_at(i);
              if (v!='~') {
-                 c = c+v;
+                 email = email+v;
              }
          }
          for (int i = 1000; i < 1320; i++) {
@@ -136,15 +148,99 @@ void read_global() {
                  put_char_at(i, '~');
              }
      }
-    fout << a << d << b << c << "\n";
-    fout1 << a << d << b << c << "\n";
+    fout << item << price << description << email << "\n";
     fout.close();
-    fout1.close();
+
 }
+
+};
+
+class User:public Login {
+  string item;
+  string price;
+  string description;
+  string email;
+  string end;
+  public:
+      public:
+          User() {
+          item ="";
+          price ="";
+          description ="";
+          email="";
+          end="";
+         std::ofstream outfile ("bought.txt");
+    }
+    void order_display() {
+        string username = "Items.txt";
+        ifstream dis(username.c_str());
+        int i = 5000;
+        getline(dis, item, '\0');
+        getline(dis, price, '\0');
+        getline(dis, description, '\0');
+        getline(dis, email, '\0');
+          print_at(i, item);
+          print_at(i+20, price);
+          print_at(i+100, description);
+          print_at(i+280, email);
+    }
+    void order_store() {
+        string username = "Items.txt";
+        ofstream myfile;
+        myfile.open("Bought.txt"); // why?
+        ifstream dis(username.c_str());
+        getline(dis, item, '\0');
+        getline(dis, price, '\0');
+        getline(dis, description, '\0');
+        getline(dis, email, '\0');
+        myfile << item << '\0' <<price << '\0'<< description << '\0' << email << "\n";
+        myfile.close();
+        
+    }
+void delete_line() 
+{ 
+    // open file in read mode or in mode 
+    ifstream is(file_name); 
+  
+    // open file in write mode or out mode 
+    ofstream ofs; 
+    ofs.open("temp.txt", ofstream::out); 
+  
+    // loop getting single characters 
+    char c; 
+    int line_no = 1; 
+    while (is.get(c)) 
+    { 
+        // if a newline character 
+        if (c == '\n') 
+        line_no++; 
+  
+        // file content not to be deleted 
+        if (line_no != n) 
+            ofs << c; 
+    } 
+  
+    // closing output file 
+    ofs.close(); 
+  
+    // closing input file 
+    is.close(); 
+  
+    // remove the original file 
+    remove(file_name); 
+  
+    // rename the file 
+    rename("temp.txt", file_name); 
+} 
+  
+
+};
 
 
 int main() {
   init();
+  User Danny{};
+  Post Post{};
   print_at(3, "S'oled");
   print_at(10, "");
   print_at(19, "");
@@ -172,21 +268,28 @@ int main() {
   print_at(405, "Price");
   print_at(414, "Description");
   print_at(435, "Email");
-  print_at(441, "order");
-  print_at(450, "username:");
-  print_at(460, "password:");
+  print_at(445, "username");
+  print_at(455, "password");
+  print_at(465, "Create");
+  print_at(475, "buy");
 
   
 
   char state = get_char_at(2);
   if (just_starting()) {
-    print_at(700, "");
+  print_at(700, "");
   print_at(719, "");
-    state = '0';
-    put_char_at(2, state);
+  print_at(730, "");
+  print_at(740, "");
+  state = '0';
+  put_char_at(2, state);
   } else if (received_event()) {
     if (event_id_is("mainpage one")) {
-      check_login();
+      Danny.check_login();
+      Post.display();
+    }
+    else if (event_id_is("create")) {
+      Danny.create_account();
     }
     else if (event_id_is("mainpage")) {
       state = '1';
@@ -202,7 +305,7 @@ int main() {
 
     }
     else if (event_id_is("post")) {
-      read_global();
+      Post.read_global();
       state = '6';
       put_char_at(6, state);
 
@@ -212,6 +315,7 @@ int main() {
       put_char_at(2, state);
     }
     else if (event_id_is("order_history_page")) {
+      Danny.order_display();
       state = '4';
       put_char_at(2, state);
     }
@@ -220,7 +324,6 @@ int main() {
       put_char_at(2, state);
     }
     else if (event_id_is("mainpage")) {
-      display();
       state = '1';
       put_char_at(2, state);
   }
@@ -229,21 +332,25 @@ int main() {
       put_char_at(2,state);
     }
     else if (event_id_is("order")) {
-      order();
-      state = '7';
+      state = '1';
       put_char_at(2,state);
+      Danny.order_display();
+      Danny.order_store();
+      //Danny.delete_line("Items.txt",1);
+      cerr << "Your order has been successfully placed!";
     }
+
   }
   
 
   if ('0' == state) add_yaml("login_page.yaml");
-  else if('1' == state) add_yaml("main_page.yaml");
+  else if('1' == state) add_yaml("main_page.yaml"),Post.display();;
   else if('2' == state) add_yaml("post_page.yaml");
   else if('3'== state) add_yaml("profile_page.yaml");  
   else if('4' == state) add_yaml("history_page.yaml");
   else if('5' == state) add_yaml("likes_pages.yaml");
   else if('6' == state) add_yaml("success.yaml");
-  else if ('7' == state) add_yaml("success.yaml");
+
 
   quit();
 }
