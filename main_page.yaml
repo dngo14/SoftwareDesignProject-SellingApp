@@ -150,14 +150,15 @@
               - ScrollView:
                   style:
                     width: 100%
-                    backgroundColor: '#eeeeee'
+                    backgroundColor: rgb(75,0,130)
                   children:
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200 
+                          borderWidth: 1
+                          borderColor: black
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
@@ -165,9 +166,8 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -184,9 +184,8 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                               
                               children:
                                 - Text:
                                     style:
@@ -199,8 +198,8 @@
                                 width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                flex: 1   
+
                               children:
                                 - Text:
                                     style:
@@ -210,21 +209,27 @@
                                 - Button:
                                     id: one
                                     style:
-                                      width: 66
-                                      height: 66
-                                      backgroundColor: rgb(39, 22, 99)
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: red
                                       borderRadius: 5
                                       borderColor: black
-                                      position: absolute
-                                      top: 50%
-                                    on_touch: purple
+                                      top: 5
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 473
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200 
+                          borderWidth: 1
+                          borderColor: black
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
@@ -232,9 +237,8 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                               
                               children:
                                 - Text:
                                     style:
@@ -251,14 +255,13 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 2320
                           - View:
                               style:
@@ -266,8 +269,7 @@
                                 width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                               
                               children:
                                 - Text:
                                     style:
@@ -277,10 +279,11 @@
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200 
+                          borderWidth: 1
+                          borderColor: black
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
@@ -288,9 +291,8 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -307,14 +309,13 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 2620
                           - View:
                               style:
@@ -322,8 +323,7 @@
                                 width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                
                               children:
                                 - Text:
                                     style:
@@ -333,10 +333,11 @@
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200 
+                          borderWidth: 1
+                          borderColor: black
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
@@ -344,9 +345,8 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -363,14 +363,13 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                               
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 2920
                           - View:
                               style:
@@ -378,8 +377,7 @@
                                 width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                               
                               children:
                                 - Text:
                                     style:
@@ -389,10 +387,11 @@
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200 
+                          borderWidth: 1
+                          borderColor: black
                           backgroundColor: rgb(77, 66, 111)
                         children:
                           - View:
@@ -400,9 +399,8 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -419,14 +417,13 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 3220
                           - View:
                               style:
@@ -434,8 +431,7 @@
                                 width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                
                               children:
                                 - Text:
                                     style:
@@ -445,20 +441,20 @@
 
                     - View:
                         style:
-                          flex: 1
+                          flex: -1
                           flexDirection: 'row'
                           width: 100%
-                          height: 200 
                           backgroundColor: rgb(77, 66, 111)
+                          borderWidth: 1
+                          borderColor: black
                         children:
                           - View:
                               style:
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(77, 66, 111)
+                                
                               children:
                                 - Text:
                                     style:
@@ -475,14 +471,13 @@
                                 alignItems: 'center'
                                 width: 33.3%
                                 height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                backgroundColor: rgb(66, 49, 99)
+                                
                               children:
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 3520
                           - View:
                               style:
@@ -490,8 +485,7 @@
                                 width: 33.3%
                                 height: 100%
                                 backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
+                                
                               children:
                                 - Text:
                                     style:

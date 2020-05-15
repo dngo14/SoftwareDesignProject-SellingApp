@@ -161,12 +161,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 8300
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 
+                                    index: 8400
                           - View:
                               style:
                                 alignItems: 'center'
@@ -180,7 +180,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 8320
                           - View:
                               style:
                                 alignItems: 'center'
@@ -194,7 +194,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 8580
 
                     - View:
                         style:

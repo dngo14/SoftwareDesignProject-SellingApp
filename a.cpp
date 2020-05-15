@@ -114,6 +114,12 @@ class Post {
         if (getline(dis, end)=="/n") {
           break;
         }
+        for (int x = i; x < 8000; x+=300) {
+          print_at(x, "");
+          print_at(x+20, "");
+          print_at(x+100, "");
+          print_at(x+280, "");
+        }
 }
 }
 void read_global() {
@@ -152,6 +158,15 @@ void read_global() {
     fout.close();
 }
 
+void display_nothing() {
+  for (int i = 2000; i < 8000; i++) {
+    char v = get_char_at(i);
+  if (v == '~') {
+  print_at(i, "");
+  }
+  }
+}
+
 };
 
 class Likes {
@@ -173,25 +188,25 @@ public:
   void store_likes(int x) {
     for (int i = x; i < x+20; i++) {
           char v = get_char_at(i);
-          if (v!='~') {
+          if (v!='~' && v!= '""') {
               item = item+v;
           }
          }
         for (int i = x+20; i < x+40; i++) {
              char v = get_char_at(i);
-             if (v!='~') {
+             if (v!='~'&& v!= '""') {
                  price = price+v;
              }
          }
          for (int i = x+100; i < x+280; i++) {
              char v = get_char_at(i);
-             if (v!='~') {
+             if (v!='~'&& v!= '""') {
                  description = description+v;
              }
          }
          for (int i = x+280; i < x+300; i++) {
              char v = get_char_at(i);
-             if (v!='~') {
+             if (v!='~'&& v!= '""') {
                  email = email+v;
              }
          }
@@ -290,6 +305,7 @@ int main() {
   print_at(445, "username");
   print_at(455, "password");
   print_at(465, "Create");
+  print_at(473, "Like");
 
   
 
@@ -349,7 +365,7 @@ int main() {
   }
     else if (event_id_is("one")) {
       Danny.store_likes(2000);
-      state = '5';
+      state = '6';
       put_char_at(2, state);
     }
   }
