@@ -259,9 +259,7 @@
                                             color: black
                                             fontSize: 16
                                           index: 480
-
-
-
+                    
 
                     - View:
                         style:
