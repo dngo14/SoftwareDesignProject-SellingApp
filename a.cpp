@@ -179,7 +179,7 @@ int numberoflines() {
     return num;
 
 }
-void delete_orders(int botton_num) {
+void delete_orders(int button_num) {
         string item = "";
         string price = "";
         string description = "";
@@ -191,31 +191,31 @@ void delete_orders(int botton_num) {
         ifstream myfile(file.c_str());
         temp.open("temp.txt");
 
-        if (botton_num==1) {
+        if (button_num==1) {
                 item = "";
                 price = "";
                 description = "";
                 email = "";
                 temp << item <<  price << description <<  email ;
         }
-        for (int i = 0; i < botton_num-1; i++) {  //pass two line  
+        for (int i = 0; i < button_num-1; i++) {  //pass two line  
 
                 getline(myfile, item, '\0');
                 getline(myfile, price, '\0');
                 getline(myfile, description, '\0');
                 getline(myfile, email, '\0');
-                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0';
+                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
                  }
                 getline(myfile, item, '\0');
                 getline(myfile, price, '\0');
                 getline(myfile, description, '\0');
                 getline(myfile, email, '\0');
-        for (int j= botton_num; j< numberoflines(); j++) {
+        for (int j= button_num; j< numberoflines(); j++) {
                 getline(myfile, item, '\0');
                 getline(myfile, price, '\0');
                 getline(myfile, description, '\0');
                 getline(myfile, email, '\0');
-                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0';
+                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
 
         }
   
@@ -227,6 +227,90 @@ void delete_orders(int botton_num) {
 
 }
 
+};
+
+class Orders {
+  string item;
+  string price;
+  string description;
+  string email;
+  string end;
+
+public:
+  Orders() {
+    item ="";
+    price ="";
+    description ="";
+    email="";
+    end="";
+  }
+
+  void store_orders(int x) {
+    for (int i = x; i < x+20; i++) {
+          char v = get_char_at(i);
+          if (v!='~' && v!= '""') {
+              item = item+v;
+          }
+         }
+        for (int i = x+20; i < x+40; i++) {
+             char v = get_char_at(i);
+             if (v!='~'&& v!= '""') {
+                 price = price+v;
+             }
+         }
+         for (int i = x+100; i < x+280; i++) {
+             char v = get_char_at(i);
+             if (v!='~'&& v!= '""') {
+                 description = description+v;
+             }
+         }
+         for (int i = x+280; i < x+300; i++) {
+             char v = get_char_at(i);
+             if (v!='~'&& v!= '""') {
+                 email = email+v;
+             }
+         }
+          ofstream fout("Bought.txt",ios::app);
+          fout << item << price << description << email << "\n";
+          fout.close();
+  }
+
+  void display_orders() {
+    string username = "Bought.txt";
+     ifstream dis(username.c_str());
+     int i = 8000;
+      while (getline(dis, item, '\0')) {
+        getline(dis, price, '\0');
+        getline(dis, description, '\0');
+        getline(dis, email, '\0');
+          print_at(i, item);
+          print_at(i+20, price);
+          print_at(i+100, description);
+          print_at(i+280, email);
+        i += 300;
+        if (getline(dis, end)=="/n") {
+          break;
+        }
+}
+}
+
+void deletemem_orders() {
+  for (int i = 8000; i < 10000; i++) {
+    char c = get_char_at(i);
+    if (c != '~') {
+    put_char_at(i, '~');
+    }
+  }
+  for (int i = 8000; i < 10000; i+=300) {
+  char v = get_char_at(i);
+  if (v == '~') {
+  print_at(i, "");
+  print_at(i+20, "");
+  print_at(i+100, "");
+  print_at(i+280, "");
+  }
+  }
+}
 };
 
 class Likes {
@@ -277,7 +361,7 @@ public:
           fout.close();
   }
 
-  void display() {
+  void display_likes() {
     string username = "Likes.txt";
      ifstream dis(username.c_str());
      int i = 8000;
@@ -296,12 +380,21 @@ public:
 }
 }
 
-void deletemem() {
+void deletemem_likes() {
   for (int i = 8000; i < 10000; i++) {
     char c = get_char_at(i);
     if (c != '~') {
     put_char_at(i, '~');
     }
+  }
+  for (int i = 8000; i < 10000; i+=300) {
+  char v = get_char_at(i);
+  if (v == '~') {
+  print_at(i, "");
+  print_at(i+20, "");
+  print_at(i+100, "");
+  print_at(i+280, "");
+  }
   }
 }
 int numberoflines() {
@@ -313,53 +406,6 @@ int numberoflines() {
 
 }
 
-void remove_like(int x) {
-  string Nitem;
-  string Nprice;
-  string Ndescription;
-  string Nemail;
-  for (int i = x; i < x+20; i++) {
-          char v = get_char_at(i);
-          if (v!='~' && v!= '""') {
-              item = item+v;
-          }
-         }
-        for (int i = x+20; i < x+40; i++) {
-             char v = get_char_at(i);
-             if (v!='~'&& v!= '""') {
-                 price = price+v;
-             }
-         }
-         for (int i = x+100; i < x+280; i++) {
-             char v = get_char_at(i);
-             if (v!='~'&& v!= '""') {
-                 description = description+v;
-             }
-         }
-         for (int i = x+280; i < x+300; i++) {
-             char v = get_char_at(i);
-             if (v!='~'&& v!= '""') {
-                 email = email+v;
-             }
-         }
-     ofstream out("outfile.txt");
-     string username = "Likes.txt";
-     ifstream dis(username.c_str());
-     string line;
-      while (getline(dis, line)) {
-        Nitem = line.find(item);
-        Nprice = line.find(price);
-        Ndescription = line.find(description);
-        Nemail = line.find(email);
-        if (item != Nitem && price != Nprice && description != Ndescription && email != Nemail) {
-          out << Nitem << Nprice << Ndescription << Nemail << "\n";
-        }
-      }
-      dis.close();
-      out.close();
-      remove("Likes.txt");
-      rename("outfile.txt","Likes.txt");
-}
 void delete_like(int botton_num) {
         string file = "Likes.txt";
         ofstream temp;
@@ -379,7 +425,7 @@ void delete_like(int botton_num) {
                 getline(myfile, price, '\0');
                 getline(myfile, description, '\0');
                 getline(myfile, email, '\0');
-                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0';
+                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
                  }
                 getline(myfile, item, '\0');
                 getline(myfile, price, '\0');
@@ -390,7 +436,7 @@ void delete_like(int botton_num) {
                 getline(myfile, price, '\0');
                 getline(myfile, description, '\0');
                 getline(myfile, email, '\0');
-                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0';
+                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
 
         }
   
@@ -402,7 +448,11 @@ void delete_like(int botton_num) {
 }
 };
 
-class User:public Login, public Likes {
+
+
+
+
+class User:public Login, public Likes, public Orders {
   bool bexists;
   bool lexists;
   public:
@@ -465,6 +515,8 @@ int main() {
   print_at(455, "password");
   print_at(465, "Create");
   print_at(473, "Like");
+  print_at(480, "Order");
+  print_at(487, "Remove");
 
   
 
@@ -507,9 +559,10 @@ int main() {
     else if (event_id_is("profilepage")) {
       state = '3';
       put_char_at(2, state);
-      Danny.display();
+      Danny.display_likes();
     }
     else if (event_id_is("order_history_page")) {
+      Danny.display_orders();
       state = '4';
       put_char_at(2, state);
     }
@@ -517,35 +570,35 @@ int main() {
       state = '5';
       put_char_at(2, state);
     }
+    else if (event_id_is("loginpage")) {
+      state = '8';
+      put_char_at(2, state);
+    }
     else if (event_id_is("mainpage")) {
       state = '1';
       put_char_at(2, state);
-      Danny.deletemem();
+      Danny.deletemem_likes();
+
   }
   
     else if (event_id_is("one")) {
       Danny.store_likes(2000);
-      Post.delete_orders(1);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("two")) {
       Danny.store_likes(2300);
-      Post.delete_orders(2);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("three")) {
       Danny.store_likes(2600);
-      Post.delete_orders(3);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("four")) {
       Danny.store_likes(2900);
-      Post.delete_orders(4);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("five")) {
       Danny.store_likes(3200);
-      Post.delete_orders(5);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("six")) {
@@ -553,21 +606,72 @@ int main() {
       state = '6';
       put_char_at(2, state);
     }
-
+      else if (event_id_is("orderone")) {
+      Danny.store_orders(2000);
+      Post.delete_orders(1);
+      state = '4';
+      put_char_at(2, state);
+    }else if (event_id_is("ordertwo")) {
+      Danny.store_orders(2300);
+      Post.delete_orders(2);
+      state = '4';
+      put_char_at(2, state);
+    }else if (event_id_is("orderthree")) {
+      Danny.store_orders(2600);
+      Post.delete_orders(3);
+      state = '4';
+      put_char_at(2, state);
+    }else if (event_id_is("orderfour")) {
+      Danny.store_orders(2900);
+      Post.delete_orders(4);
+      state = '4';
+      put_char_at(2, state);
+    }else if (event_id_is("orderfive")) {
+      Danny.store_orders(3200);
+      Post.delete_orders(5);
+      state = '4';
+      put_char_at(2, state);
+    }else if (event_id_is("ordersix")) {
+      Danny.store_orders(3500);
+      Post.delete_orders(6);
+      state = '4';
+      put_char_at(2, state);
+    }
     else if (event_id_is("delete_one")) {
       Danny.delete_like(1);
       state = '6';
       put_char_at(2, state);
-    }
+  }else if (event_id_is("delete_two")) {
+      Danny.delete_like(2);
+      state = '6';
+      put_char_at(2, state);
+  }else if (event_id_is("delete_three")) {
+      Danny.delete_like(3);
+      state = '6';
+      put_char_at(2, state);
+  }else if (event_id_is("delete_four")) {
+      Danny.delete_like(4);
+      state = '6';
+      put_char_at(2, state);
+  }else if (event_id_is("delete_five")) {
+      Danny.delete_like(5);
+      state = '6';
+      put_char_at(2, state);
+  }else if (event_id_is("delete_six")) {
+      Danny.delete_like(6);
+      state = '6';
+      put_char_at(2, state);
+  }
   }
   
 
   if ('0' == state) add_yaml("login_page.yaml");
-  else if('1' == state) add_yaml("main_page.yaml"), Post.display();
+  if ('8' == state) add_yaml("login_page.yaml");
+  else if('1' == state) add_yaml("main_page.yaml"), Post.display(), Danny.deletemem_likes();
   else if('2' == state) add_yaml("post_page.yaml");
   else if('3'== state) add_yaml("profile_page.yaml");  
-  else if('4' == state) add_yaml("history_page.yaml");
-  else if('5' == state) add_yaml("likes_pages.yaml"), Danny.display();
+  else if('4' == state) add_yaml("history_page.yaml"), Danny.display_orders();
+  else if('5' == state) add_yaml("likes_pages.yaml"), Danny.display_likes();
   else if('6' == state) add_yaml("success.yaml");
 
   quit();

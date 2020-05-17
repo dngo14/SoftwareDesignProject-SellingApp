@@ -32,8 +32,8 @@
                   - Button:
                       id: postpage
                       style:
-                        width: 105
-                        height: 105
+                        width: 77
+                        height: 77
                         top: 28%
                         left: 20%
                         borderRadius: 50%
@@ -44,7 +44,7 @@
                           - Text:
                               style:
                                 color: orange 
-                                fontSize: 33
+                                fontSize: 28
                                 position: absolute
                                 left: 15%
                                 top: 20%
@@ -61,8 +61,8 @@
                   - Button:
                       id: order_history_page
                       style:
-                        width: 105
-                        height: 105
+                        width: 77
+                        height: 77
                         top: 50
                         left: 50
                         borderRadius: 50%                        
@@ -89,8 +89,8 @@
                   - Button:
                       id: likespage
                       style:
-                        width: 105
-                        height: 105
+                        width: 77
+                        height: 77
                         top: 50
                         left: 50
                         borderRadius: 50%                      
@@ -127,7 +127,7 @@
                     borderColor: black
                     position: absolute
                     left: 94%
-                    top: 0.1%
+                    top: 0.7%
                   on_touch:
                     backgroundColor: gold
                   children:
@@ -222,6 +222,25 @@
                                             color: black
                                             fontSize: 16
                                           index: 473
+                                - Button:
+                                    id: orderone
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: gold
+                                      borderRadius: 5
+                                      borderColor: black
+                                      position: absolute
+                                      left: 66%
+                                      top: 66%
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 480
+                    
 
                     - View:
                         style:
@@ -292,6 +311,28 @@
                                             color: black
                                             fontSize: 16
                                           index: 473
+                                - Button:
+                                    id: ordertwo
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: gold
+                                      borderRadius: 5
+                                      borderColor: black
+                                      position: absolute
+                                      left: 66%
+                                      top: 66%
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 480
+
+
+
+
 
                     - View:
                         style:
@@ -362,6 +403,23 @@
                                             color: black
                                             fontSize: 16
                                           index: 473
+                                - Button:
+                                    id: orderthree
+                                    style:
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: gold
+                                      borderRadius: 5
+                                      borderColor: black
+                                      position: absolute
+                                      left: 66%
+                                      top: 66%
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 480
 
                     - View:
                         style:
@@ -432,7 +490,23 @@
                                             color: black
                                             fontSize: 16
                                           index: 473
-
+                                - Button:
+                                    id: orderfour
+                                    style:
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: gold
+                                      borderRadius: 5
+                                      borderColor: black
+                                      position: absolute
+                                      left: 66%
+                                      top: 66%
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 480
                     - View:
                         style:
                           flex: -1
@@ -502,6 +576,25 @@
                                             color: black
                                             fontSize: 16
                                           index: 473
+                                - Button:
+                                    id: orderfive
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: gold
+                                      borderRadius: 5
+                                      borderColor: black
+                                      position: absolute
+                                      left: 66%
+                                      top: 66%
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 480
+
 
                     - View:
                         style:
@@ -572,8 +665,24 @@
                                             color: black
                                             fontSize: 16
                                           index: 473
-
-
+                                - Button:
+                                    id: ordersix
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: gold
+                                      borderRadius: 5
+                                      borderColor: black
+                                      position: absolute
+                                      left: 66%
+                                      top: 66%
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 480
 
 
 
