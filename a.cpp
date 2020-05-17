@@ -242,6 +242,54 @@ void deletemem() {
     }
   }
 }
+
+void remove_like(int x) {
+  string Nitem;
+  string Nprice;
+  string Ndescription;
+  string Nemail;
+  for (int i = x; i < x+20; i++) {
+          char v = get_char_at(i);
+          if (v!='~' && v!= '""') {
+              item = item+v;
+          }
+         }
+        for (int i = x+20; i < x+40; i++) {
+             char v = get_char_at(i);
+             if (v!='~'&& v!= '""') {
+                 price = price+v;
+             }
+         }
+         for (int i = x+100; i < x+280; i++) {
+             char v = get_char_at(i);
+             if (v!='~'&& v!= '""') {
+                 description = description+v;
+             }
+         }
+         for (int i = x+280; i < x+300; i++) {
+             char v = get_char_at(i);
+             if (v!='~'&& v!= '""') {
+                 email = email+v;
+             }
+         }
+     ofstream out("outfile.txt");
+     string username = "Likes.txt";
+     ifstream dis(username.c_str());
+     string line;
+      while (getline(dis, line)) {
+        Nitem = line.find(item);
+        Nprice = line.find(price);
+        Ndescription = line.find(description);
+        Nemail = line.find(email);
+        if (item != Nitem && price != Nprice && description != Ndescription && email != Nemail) {
+          out << Nitem << Nprice << Ndescription << Nemail << "\n";
+        }
+      }
+      dis.close();
+      out.close();
+      remove("Likes.txt");
+      rename("outfile.txt","Likes.txt");
+}
 };
 
 class User:public Login, public Likes {
@@ -386,6 +434,12 @@ int main() {
       put_char_at(2, state);
     }else if (event_id_is("six")) {
       Danny.store_likes(3500);
+      state = '6';
+      put_char_at(2, state);
+    }
+
+    else if (event_id_is("delete_one")) {
+      Danny.remove_like(8000);
       state = '6';
       put_char_at(2, state);
     }

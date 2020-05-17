@@ -139,6 +139,22 @@
                                       color: orange
                                       fontSize: 20
                                     index: 8280
+                                - Button:
+                                    id: delete_one
+                                    style:
+                                      alignItems: 'center'
+                                      width: 40
+                                      height: 20
+                                      backgroundColor: red
+                                      borderRadius: 5
+                                      borderColor: black
+                                      top: 5
+                                    children:
+                                      - Text:
+                                          style:
+                                            color: black
+                                            fontSize: 16
+                                          index: 473
                               
                     - View:
                         style:
