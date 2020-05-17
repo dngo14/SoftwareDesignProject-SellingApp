@@ -235,6 +235,7 @@ class Likes {
   string description;
   string email;
   string end;
+  int num;
 
 public:
   Likes() {
@@ -243,6 +244,7 @@ public:
     description ="";
     email="";
     end="";
+    num = 0;
   }
 
   void store_likes(int x) {
@@ -302,6 +304,14 @@ void deletemem() {
     }
   }
 }
+int numberoflines() {
+    std::ifstream f("Items.txt");
+    std::string line;
+    for (num = 0; std::getline(f, line); ++num)
+    ;
+    return num;
+
+}
 
 void remove_like(int x) {
   string Nitem;
@@ -349,6 +359,46 @@ void remove_like(int x) {
       out.close();
       remove("Likes.txt");
       rename("outfile.txt","Likes.txt");
+}
+void delete_like(int botton_num) {
+        string file = "Likes.txt";
+        ofstream temp;
+        ifstream myfile(file.c_str());
+        temp.open("temp.txt");
+
+        if (botton_num==1) {
+                item = "";
+                price = "";
+                description = "";
+                email = "";
+                temp << item <<  price << description <<  email ;
+        }
+        for (int i = 0; i < botton_num-1; i++) {  //pass two line  
+
+                getline(myfile, item, '\0');
+                getline(myfile, price, '\0');
+                getline(myfile, description, '\0');
+                getline(myfile, email, '\0');
+                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0';
+                 }
+                getline(myfile, item, '\0');
+                getline(myfile, price, '\0');
+                getline(myfile, description, '\0');
+                getline(myfile, email, '\0');
+        for (int j= botton_num; j< numberoflines(); j++) {
+                getline(myfile, item, '\0');
+                getline(myfile, price, '\0');
+                getline(myfile, description, '\0');
+                getline(myfile, email, '\0');
+                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0';
+
+        }
+  
+       // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
+        myfile.close();
+        temp.close();
+        remove("Likes.txt");
+       rename("temp.txt", "Likes.txt");
 }
 };
 
@@ -505,7 +555,7 @@ int main() {
     }
 
     else if (event_id_is("delete_one")) {
-      Danny.remove_like(8000);
+      Danny.delete_like(1);
       state = '6';
       put_char_at(2, state);
     }
