@@ -126,25 +126,25 @@ void read_global() {
     ofstream fout("Items.txt",ios::app);
              for (int i = 1000; i < 1020; i++) {
              char v = get_char_at(i);
-             if (v!='~') {
+             if (v!='~' && v!= '\0') {
                  item = item+v;
              }
          }
         for (int i = 1020; i < 1040; i++) {
              char v = get_char_at(i);
-             if (v!='~') {
+             if (v!='~' && v!= '\0') {
                  price = price+v;
              }
          }
          for (int i = 1100; i < 1280; i++) {
              char v = get_char_at(i);
-             if (v!='~') {
+             if (v!='~' && v!= '\0') {
                  description = description+v;
              }
          }
          for (int i = 1300; i < 1320; i++) {
              char v = get_char_at(i);
-             if (v!='~') {
+             if (v!='~' && v!= '\0') {
                  email = email+v;
              }
          }
@@ -154,7 +154,7 @@ void read_global() {
                  put_char_at(i, '~');
              }
      }
-    fout << item << price << description << email << "\n";
+    fout << item << '\0' << price << '\0' << description << '\0' << email << '\0' << "\n";
     fout.close();
 }
 
@@ -398,7 +398,7 @@ void deletemem_likes() {
   }
 }
 int numberoflines() {
-    std::ifstream f("Items.txt");
+    std::ifstream f("Likes.txt");
     std::string line;
     for (num = 0; std::getline(f, line); ++num)
     ;
@@ -406,45 +406,97 @@ int numberoflines() {
 
 }
 
-void delete_like(int botton_num) {
-        string file = "Likes.txt";
-        ofstream temp;
-        ifstream myfile(file.c_str());
-        temp.open("temp.txt");
+// void delete_like(int botton_num) {
+//         string file = "Likes.txt";
+//         ofstream temp;
+//         ifstream myfile(file.c_str());
+//         temp.open("temp.txt");
 
-        if (botton_num==1) {
-                item = "";
-                price = "";
-                description = "";
-                email = "";
-                temp << item <<  price << description <<  email ;
-        }
-        for (int i = 0; i < botton_num-1; i++) {  //pass two line  
+//         if (botton_num==1) {
+//                 item = "";
+//                 price = "";
+//                 description = "";
+//                 email = "";
+//                 temp << item <<  price << description <<  email ;
+//         }
+//         for (int i = 0; i < botton_num-1; i++) {  //pass two line  
 
-                getline(myfile, item, '\0');
-                getline(myfile, price, '\0');
-                getline(myfile, description, '\0');
-                getline(myfile, email, '\0');
-                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
-                 }
-                getline(myfile, item, '\0');
-                getline(myfile, price, '\0');
-                getline(myfile, description, '\0');
-                getline(myfile, email, '\0');
-        for (int j= botton_num; j< numberoflines(); j++) {
-                getline(myfile, item, '\0');
-                getline(myfile, price, '\0');
-                getline(myfile, description, '\0');
-                getline(myfile, email, '\0');
-                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
-
-        }
+//                 getline(myfile, item, '\0');
+//                 getline(myfile, price, '\0');
+//                 getline(myfile, description, '\0');
+//                 getline(myfile, email, '\0');
+//                 temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+//                  }
+//                 getline(myfile, item, '\0');
+//                 getline(myfile, price, '\0');
+//                 getline(myfile, description, '\0');
+//                 getline(myfile, email, '\0');
+//         for (int j= botton_num; j< numberoflines(); j++) {
+//                 getline(myfile, item, '\0');
+//                 getline(myfile, price, '\0');
+//                 getline(myfile, description, '\0');
+//                 getline(myfile, email, '\0');
+//                 temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+//         }
   
-       // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
-        myfile.close();
-        temp.close();
-        remove("Likes.txt");
-       rename("temp.txt", "Likes.txt");
+//        // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
+//         myfile.close();
+//         temp.close();
+//         remove("Likes.txt");
+//        rename("temp.txt", "Likes.txt");
+// }
+void delete_like(int x) {
+    string file = "Likes.txt";
+    ofstream temp;
+    ifstream myfile(file.c_str());
+    temp.open("temp.txt");
+    int i = 1;
+    string titem;
+    string tprice;
+    string tdescription;
+    string temail;
+    string tend;
+    if (x > 1) {
+    while (i<x && getline(myfile, item, '\0')) {
+       getline(myfile, price, '\0');
+       getline(myfile, description, '\0');
+       getline(myfile, email, '\0');
+       getline(myfile, end);
+       temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+       i+=1;
+    }
+      getline(myfile, titem, '\0');
+      getline(myfile, tprice, '\0');
+      getline(myfile, tdescription, '\0');
+      getline(myfile, temail, '\0');
+      getline(myfile, tend);
+    while(getline(myfile, item, '\0')) {
+      getline(myfile, price, '\0');
+      getline(myfile, description, '\0');
+      getline(myfile, email, '\0');
+      getline(myfile, end);
+      temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+    }
+    }
+    else {
+      getline(myfile, titem, '\0');
+      getline(myfile, tprice, '\0');
+      getline(myfile, tdescription, '\0');
+      getline(myfile, temail, '\0');
+      getline(myfile, tend);
+    while(getline(myfile, item, '\0')) {
+      getline(myfile, price, '\0');
+      getline(myfile, description, '\0');
+      getline(myfile, email, '\0');
+      getline(myfile, end);
+      temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+    }
+    }
+    myfile.close();
+    temp.close();
+    remove("Likes.txt");
+    rename("temp.txt", "Likes.txt");
+    deletemem_likes();
 }
 };
 

@@ -195,7 +195,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 8320
                           - View:
                               style:
@@ -267,7 +267,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 8620
                           - View:
                               style:
@@ -339,7 +339,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 8920
                           - View:
                               style:
@@ -411,7 +411,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 9220
                           - View:
                               style:
@@ -482,7 +482,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 9520
                           - View:
                               style:
@@ -556,7 +556,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 
                           - View:
                               style:
@@ -627,7 +627,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 
                           - View:
                               style:
