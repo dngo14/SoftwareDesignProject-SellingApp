@@ -54,7 +54,8 @@
             backgroundColor: 'white'
             borderColor: 'gray'
             borderWidth: 1
-
+          extra_props:
+            secureTextEntry: true
       - Button:
           id: mainpage one
           style:
@@ -71,8 +72,6 @@
                     left: 10
                     top: 13
                   index: 28
-
-
       - View:
           style:
             width: 100%
@@ -124,6 +123,8 @@
             backgroundColor: 'white'
             borderColor: 'gray'
             borderWidth: 1
+          extra_props:
+            secureTextEntry: true
 
       - Button:
           id: create
@@ -141,6 +142,7 @@
                     left: 3
                     top: 13
                   index: 465
+
 
 
 
