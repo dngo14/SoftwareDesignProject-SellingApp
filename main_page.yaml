@@ -116,7 +116,26 @@
               fontSize: 30
               position: absolute  
               top: 5% 
-              left: 33%
+              left: 35%
+
+
+        - Text:
+            index: 110
+            style:
+              color: orange
+              fontSize: 30
+              position: absolute  
+              top: 5% 
+              left: 58%
+
+        - Text:
+            index: 120
+            style:
+              color: orange
+              fontSize: 30
+              position: absolute  
+              top: 5% 
+              left: 82%
         - Button:
                   id: profilepage
                   style:
