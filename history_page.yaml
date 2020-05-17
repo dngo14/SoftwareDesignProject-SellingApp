@@ -66,13 +66,29 @@
               top: 0
             children:
               - Text:
-                  style:
-                    color: orange
-                    fontSize: 40
-                    position: absolute
-                    top: 20%
-                    left: 22%
-                  index: 100
+                    index: 100
+                    style:
+                      color: orange
+                      fontSize: 30
+                      position: absolute  
+                      top: 20% 
+                      left: 14%
+              - Text:
+                    index: 110
+                    style:
+                      color: orange
+                      fontSize: 30
+                      position: absolute  
+                      top: 20% 
+                      left: 46%
+              - Text:
+                    index: 120
+                    style:
+                      color: orange
+                      fontSize: 30
+                      position: absolute  
+                      top: 20% 
+                      left: 78%
         - View:
             style:
               width: 100%
@@ -105,12 +121,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9000
+                                    index: 8000
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 9100
+                                    index: 8100
                           - View:
                               style:
                                 alignItems: 'center'
@@ -124,7 +140,7 @@
                                     style:
                                       color: orange
                                       fontSize: 50
-                                    index: 9020
+                                    index: 8020
                           - View:
                               style:
                                 alignItems: 'center'
@@ -138,7 +154,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9280
+                                    index: 8280
                               
                     - View:
                         style:
@@ -161,12 +177,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9300
+                                    index: 8300
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 9400
+                                    index: 8400
                           - View:
                               style:
                                 alignItems: 'center'
@@ -180,7 +196,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9320
+                                    index: 8320
                           - View:
                               style:
                                 alignItems: 'center'
@@ -194,7 +210,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9580
+                                    index: 8580
 
                     - View:
                         style:
