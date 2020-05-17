@@ -163,70 +163,128 @@ void display_nothing() {
     char v = get_char_at(i);
   if (v == '~') {
   print_at(i, "");
+  print_at(i+20, "");
+  print_at(i+100, "");
+  print_at(i+280, "");
   }
   }
 }
 
 
 
-static int num;
+// static int num;
 
-int numberoflines() {
-    std::ifstream f("Items.txt");
-    std::string line;
-    for (num = 0; std::getline(f, line); ++num)
-    ;
-    return num;
+// int numberoflines() {
+//     std::ifstream f("Items.txt");
+//     std::string line;
+//     for (num = 0; std::getline(f, line); ++num)
+//     ;
+//     return num;
 
-}
-void delete_orders(int button_num) {
-        string item = "";
-        string price = "";
-        string description = "";
-        string email = "";
-        string end = "";
+// }
+// void delete_orders(int button_num) {
+//         string item = "";
+//         string price = "";
+//         string description = "";
+//         string email = "";
+//         string end = "";
 
-        string file = "Items.txt";
-        ofstream temp;
-        ifstream myfile(file.c_str());
-        temp.open("temp.txt");
+//         string file = "Items.txt";
+//         ofstream temp;
+//         ifstream myfile(file.c_str());
+//         temp.open("temp.txt");
 
-        if (button_num==1) {
-                item = "";
-                price = "";
-                description = "";
-                email = "";
-                temp << item <<  price << description <<  email ;
-        }
-        for (int i = 0; i < button_num-1; i++) {  //pass two line  
+//         if (button_num==1) {
+//                 item = "";
+//                 price = "";
+//                 description = "";
+//                 email = "";
+//                 temp << item <<  price << description <<  email ;
+//         }
+//         for (int i = 0; i < button_num-1; i++) {  //pass two line  
 
-                getline(myfile, item, '\0');
-                getline(myfile, price, '\0');
-                getline(myfile, description, '\0');
-                getline(myfile, email, '\0');
-                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
-                 }
-                getline(myfile, item, '\0');
-                getline(myfile, price, '\0');
-                getline(myfile, description, '\0');
-                getline(myfile, email, '\0');
-        for (int j= button_num; j< numberoflines(); j++) {
-                getline(myfile, item, '\0');
-                getline(myfile, price, '\0');
-                getline(myfile, description, '\0');
-                getline(myfile, email, '\0');
-                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+//                 getline(myfile, item, '\0');
+//                 getline(myfile, price, '\0');
+//                 getline(myfile, description, '\0');
+//                 getline(myfile, email, '\0');
+//                 temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+//                  }
+//                 getline(myfile, item, '\0');
+//                 getline(myfile, price, '\0');
+//                 getline(myfile, description, '\0');
+//                 getline(myfile, email, '\0');
+//         for (int j= button_num; j< numberoflines(); j++) {
+//                 getline(myfile, item, '\0');
+//                 getline(myfile, price, '\0');
+//                 getline(myfile, description, '\0');
+//                 getline(myfile, email, '\0');
+//                 temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
 
-        }
+//         }
   
-       // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
-        myfile.close();
-        temp.close();
-        remove("Items.txt");
-       rename("temp.txt", "Items.txt");
+//        // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
+//         myfile.close();
+//         temp.close();
+//         remove("Items.txt");
+//        rename("temp.txt", "Items.txt");
 
+// }
+void delete_orders(int x) {
+    string file = "Items.txt";
+    ofstream temp;
+    ofstream bought("Bought.txt",ios::app);
+    ifstream myfile(file.c_str());
+    temp.open("temp.txt");
+    int i = 1;
+    string titem;
+    string tprice;
+    string tdescription;
+    string temail;
+    string tend;
+    if (x > 1) {
+    while (i<x && getline(myfile, item, '\0')) {
+       getline(myfile, price, '\0');
+       getline(myfile, description, '\0');
+       getline(myfile, email, '\0');
+       getline(myfile, end);
+       temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+       i+=1;
+    }
+      getline(myfile, titem, '\0');
+      getline(myfile, tprice, '\0');
+      getline(myfile, tdescription, '\0');
+      getline(myfile, temail, '\0');
+      getline(myfile, tend);
+      bought << titem << '\0' <<  tprice << '\0' << tdescription << '\0' <<  temail << '\0' << "\n";
+    while(getline(myfile, item, '\0')) {
+      getline(myfile, price, '\0');
+      getline(myfile, description, '\0');
+      getline(myfile, email, '\0');
+      getline(myfile, end);
+      temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+    }
+    }
+    else {
+      getline(myfile, titem, '\0');
+      getline(myfile, tprice, '\0');
+      getline(myfile, tdescription, '\0');
+      getline(myfile, temail, '\0');
+      getline(myfile, tend);
+      bought << titem << '\0' <<  tprice << '\0' << tdescription << '\0' <<  temail << '\0' << "\n";
+    while(getline(myfile, item, '\0')) {
+      getline(myfile, price, '\0');
+      getline(myfile, description, '\0');
+      getline(myfile, email, '\0');
+      getline(myfile, end);
+      temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
+    }
+    }
+    myfile.close();
+    temp.close();
+    bought.close();
+    remove("Items.txt");
+    rename("temp.txt", "Items.txt");
 }
-
 };
 
 class Orders {
@@ -397,54 +455,7 @@ void deletemem_likes() {
   }
   }
 }
-int numberoflines() {
-    std::ifstream f("Likes.txt");
-    std::string line;
-    for (num = 0; std::getline(f, line); ++num)
-    ;
-    return num;
 
-}
-
-// void delete_like(int botton_num) {
-//         string file = "Likes.txt";
-//         ofstream temp;
-//         ifstream myfile(file.c_str());
-//         temp.open("temp.txt");
-
-//         if (botton_num==1) {
-//                 item = "";
-//                 price = "";
-//                 description = "";
-//                 email = "";
-//                 temp << item <<  price << description <<  email ;
-//         }
-//         for (int i = 0; i < botton_num-1; i++) {  //pass two line  
-
-//                 getline(myfile, item, '\0');
-//                 getline(myfile, price, '\0');
-//                 getline(myfile, description, '\0');
-//                 getline(myfile, email, '\0');
-//                 temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
-//                  }
-//                 getline(myfile, item, '\0');
-//                 getline(myfile, price, '\0');
-//                 getline(myfile, description, '\0');
-//                 getline(myfile, email, '\0');
-//         for (int j= botton_num; j< numberoflines(); j++) {
-//                 getline(myfile, item, '\0');
-//                 getline(myfile, price, '\0');
-//                 getline(myfile, description, '\0');
-//                 getline(myfile, email, '\0');
-//                 temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
-//         }
-  
-//        // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
-//         myfile.close();
-//         temp.close();
-//         remove("Likes.txt");
-//        rename("temp.txt", "Likes.txt");
-// }
 void delete_like(int x) {
     string file = "Likes.txt";
     ofstream temp;
@@ -532,7 +543,6 @@ class User:public Login, public Likes, public Orders {
 
 };
 
-int Post::num = 0;
 
 int main() {
   init();
@@ -661,32 +671,32 @@ int main() {
       else if (event_id_is("orderone")) {
       Danny.store_orders(2000);
       Post.delete_orders(1);
-      state = '4';
+      state = '6';
       put_char_at(2, state);
     }else if (event_id_is("ordertwo")) {
       Danny.store_orders(2300);
       Post.delete_orders(2);
-      state = '4';
+      state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderthree")) {
       Danny.store_orders(2600);
       Post.delete_orders(3);
-      state = '4';
+      state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderfour")) {
       Danny.store_orders(2900);
       Post.delete_orders(4);
-      state = '4';
+      state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderfive")) {
       Danny.store_orders(3200);
       Post.delete_orders(5);
-      state = '4';
+      state = '6';
       put_char_at(2, state);
     }else if (event_id_is("ordersix")) {
       Danny.store_orders(3500);
       Post.delete_orders(6);
-      state = '4';
+      state = '6';
       put_char_at(2, state);
     }
     else if (event_id_is("delete_one")) {
@@ -719,7 +729,7 @@ int main() {
 
   if ('0' == state) add_yaml("login_page.yaml");
   if ('8' == state) add_yaml("login_page.yaml");
-  else if('1' == state) add_yaml("main_page.yaml"), Post.display(), Danny.deletemem_likes();
+  else if('1' == state) add_yaml("main_page.yaml"), Post.display(), Danny.deletemem_likes(), Post.display_nothing();
   else if('2' == state) add_yaml("post_page.yaml");
   else if('3'== state) add_yaml("profile_page.yaml");  
   else if('4' == state) add_yaml("history_page.yaml"), Danny.display_orders();

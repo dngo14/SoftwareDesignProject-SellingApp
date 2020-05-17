@@ -105,12 +105,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9000
+                                    index: 8000
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 9100
+                                    index: 8100
                           - View:
                               style:
                                 alignItems: 'center'
@@ -124,7 +124,7 @@
                                     style:
                                       color: orange
                                       fontSize: 50
-                                    index: 9020
+                                    index: 8020
                           - View:
                               style:
                                 alignItems: 'center'
@@ -138,7 +138,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9280
+                                    index: 8280
                               
                     - View:
                         style:
@@ -161,12 +161,180 @@
                                     style:
                                       color: orange
                                       fontSize: 20
+                                    index: 8300
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 8400
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 8320
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 8580
+
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200 
+                          backgroundColor: rgb(77, 66, 111)
+                        children:
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 8600
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 8700
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 8620
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 8880
+
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200 
+                          backgroundColor: rgb(77, 66, 111)
+                        children:
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 8900
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
+                                    index: 9000
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 8920
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 9180
+
+                    - View:
+                        style:
+                          flex: 1
+                          flexDirection: 'row'
+                          width: 100%
+                          height: 200 
+                          backgroundColor: rgb(77, 66, 111)
+                        children:
+                          - View:
+                              style:
+                                alignItems: 'center'
+                                width: 33.3%
+                                height: 100%
+                                backgroundColor: 'transparent'
+                                borderWidth: 1
+                                borderColor: black
+                              children:
+                                - Text:
+                                    style:
+                                      color: orange
+                                      fontSize: 20
+                                    index: 9200
+                                - Text:
+                                    style:
+                                      color: black
+                                      fontSize: 20
                                     index: 9300
-                                - Text:
-                                    style:
-                                      color: black
-                                      fontSize: 20
-                                    index: 9400
                           - View:
                               style:
                                 alignItems: 'center'
@@ -180,7 +348,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9320
+                                    index: 9220
                           - View:
                               style:
                                 alignItems: 'center'
@@ -194,7 +362,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 9580
+                                    index: 9480
 
                     - View:
                         style:
@@ -217,12 +385,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9500
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 
+                                    index: 9600
                           - View:
                               style:
                                 alignItems: 'center'
@@ -236,7 +404,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9520
                           - View:
                               style:
                                 alignItems: 'center'
@@ -250,172 +418,4 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
-
-                    - View:
-                        style:
-                          flex: 1
-                          flexDirection: 'row'
-                          width: 100%
-                          height: 200 
-                          backgroundColor: rgb(77, 66, 111)
-                        children:
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
-                                - Text:
-                                    style:
-                                      color: black
-                                      fontSize: 20
-                                    index: 
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
-
-                    - View:
-                        style:
-                          flex: 1
-                          flexDirection: 'row'
-                          width: 100%
-                          height: 200 
-                          backgroundColor: rgb(77, 66, 111)
-                        children:
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
-                                - Text:
-                                    style:
-                                      color: black
-                                      fontSize: 20
-                                    index: 
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
-
-                    - View:
-                        style:
-                          flex: 1
-                          flexDirection: 'row'
-                          width: 100%
-                          height: 200 
-                          backgroundColor: rgb(77, 66, 111)
-                        children:
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
-                                - Text:
-                                    style:
-                                      color: black
-                                      fontSize: 20
-                                    index: 
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
-                          - View:
-                              style:
-                                alignItems: 'center'
-                                width: 33.3%
-                                height: 100%
-                                backgroundColor: 'transparent'
-                                borderWidth: 1
-                                borderColor: black
-                              children:
-                                - Text:
-                                    style:
-                                      color: orange
-                                      fontSize: 20
-                                    index: 
+                                    index: 9780
