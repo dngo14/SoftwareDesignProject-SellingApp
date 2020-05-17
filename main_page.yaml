@@ -32,8 +32,8 @@
                   - Button:
                       id: postpage
                       style:
-                        width: 77
-                        height: 77
+                        width: 105
+                        height: 105
                         top: 28%
                         left: 20%
                         borderRadius: 50%
@@ -44,7 +44,7 @@
                           - Text:
                               style:
                                 color: orange 
-                                fontSize: 28
+                                fontSize: 33
                                 position: absolute
                                 left: 15%
                                 top: 20%
@@ -61,8 +61,8 @@
                   - Button:
                       id: order_history_page
                       style:
-                        width: 77
-                        height: 77
+                        width: 105
+                        height: 105
                         top: 50
                         left: 50
                         borderRadius: 50%                        
@@ -89,8 +89,8 @@
                   - Button:
                       id: likespage
                       style:
-                        width: 77
-                        height: 77
+                        width: 105
+                        height: 105
                         top: 50
                         left: 50
                         borderRadius: 50%                      
@@ -127,7 +127,7 @@
                     borderColor: black
                     position: absolute
                     left: 94%
-                    top: 0.7%
+                    top: 0.1%
                   on_touch:
                     backgroundColor: gold
                   children:

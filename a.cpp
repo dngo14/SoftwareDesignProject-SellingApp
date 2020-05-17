@@ -167,6 +167,66 @@ void display_nothing() {
   }
 }
 
+
+
+static int num;
+
+int numberoflines() {
+    std::ifstream f("Items.txt");
+    std::string line;
+    for (num = 0; std::getline(f, line); ++num)
+    ;
+    return num;
+
+}
+void delete_orders(int botton_num) {
+        string item = "";
+        string price = "";
+        string description = "";
+        string email = "";
+        string end = "";
+
+        string file = "Items.txt";
+        ofstream temp;
+        ifstream myfile(file.c_str());
+        temp.open("temp.txt");
+
+        if (botton_num==1) {
+                item = "";
+                price = "";
+                description = "";
+                email = "";
+                temp << item <<  price << description <<  email ;
+        }
+        for (int i = 0; i < botton_num-1; i++) {  //pass two line  
+
+                getline(myfile, item, '\0');
+                getline(myfile, price, '\0');
+                getline(myfile, description, '\0');
+                getline(myfile, email, '\0');
+                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0';
+                 }
+                getline(myfile, item, '\0');
+                getline(myfile, price, '\0');
+                getline(myfile, description, '\0');
+                getline(myfile, email, '\0');
+        for (int j= botton_num; j< numberoflines(); j++) {
+                getline(myfile, item, '\0');
+                getline(myfile, price, '\0');
+                getline(myfile, description, '\0');
+                getline(myfile, email, '\0');
+                temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0';
+
+        }
+  
+       // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
+        myfile.close();
+        temp.close();
+        remove("Items.txt");
+       rename("temp.txt", "Items.txt");
+
+}
+
 };
 
 class Likes {
@@ -320,6 +380,7 @@ class User:public Login, public Likes {
 
 };
 
+int Post::num = 0;
 
 int main() {
   init();
@@ -414,22 +475,27 @@ int main() {
   
     else if (event_id_is("one")) {
       Danny.store_likes(2000);
+      Post.delete_orders(1);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("two")) {
       Danny.store_likes(2300);
+      Post.delete_orders(2);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("three")) {
       Danny.store_likes(2600);
+      Post.delete_orders(3);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("four")) {
       Danny.store_likes(2900);
+      Post.delete_orders(4);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("five")) {
       Danny.store_likes(3200);
+      Post.delete_orders(5);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("six")) {

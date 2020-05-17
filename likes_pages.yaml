@@ -71,6 +71,26 @@
                     fontSize: 40
                     position: absolute
                     top: 20%
+<<<<<<< HEAD
+                    left: 15%
+                  index: 100
+              - Text:
+                  index: 110
+                  style:
+                    color: orange
+                    fontSize: 50
+                    position: absolute  
+                    top: 20% 
+                    left: 45%
+              - Text:
+                  index: 120
+                  style:
+                    color: orange
+                    fontSize: 50
+                    position: absolute  
+                    top: 20% 
+                    left: 75%              
+=======
                     left: 22%
                   index: 100
         - View:
@@ -435,3 +455,4 @@
                                       color: orange
                                       fontSize: 20
                                     index: 
+>>>>>>> e364e29886e4afb6f80289c18fd59a6c1c329253

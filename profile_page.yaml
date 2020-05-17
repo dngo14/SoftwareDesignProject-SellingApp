@@ -24,13 +24,12 @@
                     backgroundColor: orange
                     position: absolute
                     left: 75%
-              - Text:
-                  style:
-                    color: black
-                    fontSize: 28
-                    position: absolute
-                    left: 75%
-                  index: 350
+                  children:
+                    - Image:
+                        source: ole.png
+                        style:
+                          width: 100%
+                          height: 100%
             
               - Button:
                   id: mainpage
@@ -82,8 +81,20 @@
               backgroundColor: rgb(77, 66, 111)
               top: 30
             children:
-              - Text:
-                  style:
-                    color: orange
-                    fontSize: 50
-                  index: 210
+               - Button:
+                      id: loginpage
+                      style:
+                        width: 144
+                        height: 72
+                        backgroundColor: rgb(77, 66, 111)
+                      on_touch:
+                        backgroundColor: gold
+                      children:
+                          - Text:
+                              style:
+                                color: orange 
+                                fontSize: 39
+                                position: absolute
+                                left: 18%
+                                top: 16%
+                              index: 210
