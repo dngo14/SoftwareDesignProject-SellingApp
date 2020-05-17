@@ -233,12 +233,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 8600
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 
+                                    index: 8700
                           - View:
                               style:
                                 alignItems: 'center'
@@ -252,7 +252,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 8620
                           - View:
                               style:
                                 alignItems: 'center'
@@ -266,7 +266,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 8880
 
                     - View:
                         style:
@@ -289,12 +289,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 8900
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 
+                                    index: 9000
                           - View:
                               style:
                                 alignItems: 'center'
@@ -308,7 +308,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 8920
                           - View:
                               style:
                                 alignItems: 'center'
@@ -322,7 +322,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9180
 
                     - View:
                         style:
@@ -345,12 +345,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9200
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 
+                                    index: 9300
                           - View:
                               style:
                                 alignItems: 'center'
@@ -364,7 +364,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9220
                           - View:
                               style:
                                 alignItems: 'center'
@@ -378,7 +378,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9480
 
                     - View:
                         style:
@@ -401,12 +401,12 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9500
                                 - Text:
                                     style:
                                       color: black
                                       fontSize: 20
-                                    index: 
+                                    index: 9600
                           - View:
                               style:
                                 alignItems: 'center'
@@ -420,7 +420,7 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9520
                           - View:
                               style:
                                 alignItems: 'center'
@@ -434,4 +434,4 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
+                                    index: 9780
