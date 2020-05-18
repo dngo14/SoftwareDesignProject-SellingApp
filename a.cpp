@@ -555,7 +555,9 @@ int main() {
   print_at(40, "post");
   print_at(50, "order");
   print_at(70, "Likes");
-  print_at(100, "Item                   Price                  Seller");
+  print_at(100, "Item");
+  print_at(110, "Price");
+  print_at(120, "Description");
   print_at(170, "Post"); 
   print_at(200, "history");
   print_at(210, "logout");
@@ -640,8 +642,11 @@ int main() {
       state = '1';
       put_char_at(2, state);
       Danny.deletemem_likes();
-
-  }
+    }
+    else if (event_id_is("myposts")) {
+      state = '7';
+      put_char_at(2, state);
+    }
   
     else if (event_id_is("one")) {
       Danny.store_likes(2000);
@@ -669,27 +674,25 @@ int main() {
       put_char_at(2, state);
     }
       else if (event_id_is("orderone")) {
-      Danny.store_orders(2000);
       Post.delete_orders(1);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("ordertwo")) {
-      Danny.store_orders(2300);
+
       Post.delete_orders(2);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderthree")) {
-      Danny.store_orders(2600);
+
       Post.delete_orders(3);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderfour")) {
-      Danny.store_orders(2900);
       Post.delete_orders(4);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderfive")) {
-      Danny.store_orders(3200);
+
       Post.delete_orders(5);
       state = '6';
       put_char_at(2, state);
@@ -735,6 +738,7 @@ int main() {
   else if('4' == state) add_yaml("history_page.yaml"), Danny.display_orders();
   else if('5' == state) add_yaml("likes_pages.yaml"), Danny.display_likes();
   else if('6' == state) add_yaml("success.yaml");
+  else if('7' == state) add_yaml("my_posts.yaml"), Post.display();
 
   quit();
 }

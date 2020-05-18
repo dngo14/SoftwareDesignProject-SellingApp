@@ -13,7 +13,7 @@
               - Text:
                   style:
                     color: orange
-                    fontSize: 50
+                    fontSize: 250%
                     position: absolute
                     left: 35%
                     top: 10%
@@ -66,13 +66,29 @@
               top: 0
             children:
               - Text:
-                  style:
-                    color: orange
-                    fontSize: 40
-                    position: absolute
-                    top: 20%
-                    left: 18%
-                  index: 100
+                    index: 100
+                    style:
+                      color: orange
+                      fontSize: 120%
+                      position: absolute  
+                      top: 20% 
+                      left: 12%
+              - Text:
+                    index: 110
+                    style:
+                      color: orange
+                      fontSize: 120%
+                      position: absolute  
+                      top: 20% 
+                      left: 40%
+              - Text:
+                    index: 120
+                    style:
+                      color: orange
+                      fontSize: 120%
+                      position: absolute  
+                      top: 20% 
+                      left: 70%
         - View:
             style:
               width: 100%
