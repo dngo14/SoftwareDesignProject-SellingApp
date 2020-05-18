@@ -100,7 +100,7 @@
                           - Text:
                               style:
                                 color: orange 
-                                fontSize: 300%
+                                fontSize: 200%
                                 position: absolute
                                 fontWeight: 'bold'
                                 textDecorationLine: 'underline'
@@ -131,10 +131,10 @@
                               style:
                                 color: orange
                                 position: absolute
-                                fontSize: 290%
+                                fontSize: 170%
                                 fontWeight: 'bold'
                                 textDecorationLine: 'underline'
-                              index: 50
+                              index: 290
                
               - View:
                   style:
@@ -162,7 +162,7 @@
                               style:
                                 color: orange
                                 position: absolute
-                                fontSize: 300%
+                                fontSize: 200%
                                 fontWeight: 'bold'
                                 textDecorationLine: 'underline'
                               index: 70

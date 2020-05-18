@@ -81,6 +81,21 @@ void create_account() { //function to create an account
 }
 
 
+  string return_nuser() {// return methods/functions for future updates
+    return nuser;
+  }
+  string return_npass() {
+    return npass;
+  }
+  string return_user() {
+    return user;
+  }
+  string return_pass() {
+    return pass;
+  }
+  string return_file() {
+    return file;
+  }
 };
 
 class Post {
@@ -226,6 +241,23 @@ void delete_orders(int x) { // function to delete an item in the txt file when a
     remove("Items.txt"); //deletes the Items.txt
     rename("temp.txt", "Items.txt"); //renames the temporary file to Items.txt
 }
+
+  string return_item() {// return methods/functions for future updates
+    return item;
+  }
+  string return_price() {
+    return price;
+  }
+  string return_description() {
+    return description;
+  }
+  string return_email() {
+    return email;
+  }
+  string return_end() {
+    return end;
+  }
+
 };
 
 class Orders {
@@ -310,6 +342,22 @@ void deletemem_orders() { //to clear the global mem after you leave you my order
   }
   }
 }
+  string return_item() {// return methods/functions for future updates
+    return item;
+  }
+  string return_price() {
+    return price;
+  }
+  string return_description() {
+    return description;
+  }
+  string return_email() {
+    return email;
+  }
+  string return_end() {
+    return end;
+  }
+
 };
 
 class Likes {
@@ -450,9 +498,22 @@ void delete_like(int x) { //deletes like by determining what line the like is on
     rename("temp.txt", "Likes.txt"); //renames temporary file to personal Likes.txt
     deletemem_likes();
 }
+  string return_item() {// return methods/functions for future updates
+    return item;
+  }
+  string return_price() {
+    return price;
+  }
+  string return_description() {
+    return description;
+  }
+  string return_email() {
+    return email;
+  }
+  string return_end() {
+    return end;
+  }
 };
-
-
 
 
 
@@ -480,15 +541,32 @@ class User:public Login, public Likes, public Orders { //created when a user log
 //   ifstream lexists("Likes.txt");
 //   return lexists;
 // }
+void check_bought() { //checks to see if the user has a personal bought.txt
+  fstream fileStream;
+  fileStream.open("Bought.txt");
+  if (fileStream.fail()) { //if not, makes a file for them
+    string name = "Bought.txt";
+    make_file(name);
+  }
+}
+ 
+void check_likes() { //checks if the user has a personal likes.txt
+  fstream fileStream;
+  fileStream.open("Likes.txt"); //if not, creates a personal likes.txt
+  if (fileStream.fail()) {
+     string name = "Likes.txt";
+     make_file(name);
+}
+}
+ 
+void make_file(string x) { //makes the files
+  ofstream file;
+  file.open(x);
+}
 
 
 };
-
-
-int main() {
-  init();
-  User Danny{}; //creates user object
-  Post Post{}; //creates Post object
+void characters_for_yaml () {
   print_at(3, "S'oled"); //prints at specific spots in global mem to displat
   print_at(10, "");
   print_at(19, "");
@@ -523,15 +601,32 @@ int main() {
   print_at(480, "Order");
   print_at(487, "Remove");
   print_at(500, "Incorrect username or passord. Please try it again!");
+}
+void just_starting_empty_string() {
+    print_at(700, ""); //like what the name of the function states
+    print_at(719, "");
+    print_at(730, "");
+    print_at(740, "");
 
-  
+}
+void post_page_empty_strings () {
+      print_at(1000, ""); //like what the name of the function states
+      print_at(1020, "");
+      print_at(1100, "");
+      print_at(1300, "");
+}
+
+
+
+int main() {
+  init();
+  User Danny{}; //creates user object
+  Post Post{}; //creates Post object
+  characters_for_yaml();
 
   char state = get_char_at(2); //checks for when the user presses any buttons
   if (just_starting()) {
-  print_at(700, "");
-  print_at(719, "");
-  print_at(730, "");
-  print_at(740, "");
+  just_starting_empty_string();
   state = '0';
   put_char_at(2, state);
   } else if (received_event()) {
@@ -550,10 +645,7 @@ int main() {
     else if (event_id_is("postpage")) {
       state = '2';
       put_char_at(2, state);
-      print_at(1000, "");
-      print_at(1020, "");
-      print_at(1100, "");
-      print_at(1300, "");
+      post_page_empty_strings();
 
     }
     else if (event_id_is("post")) {

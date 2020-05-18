@@ -13,7 +13,7 @@
               left: 40%
               top: 40%
         - Button:
-            id: mainpage
+            id: loginpage
             style:
               width: 50
               height: 30
