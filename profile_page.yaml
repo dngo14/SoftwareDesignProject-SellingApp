@@ -60,8 +60,8 @@
                - Button:
                       id: myposts
                       style:
-                        width: 200
-                        height: 72
+                        width: 15%
+                        height: 100%
                         backgroundColor: rgb(50, 39, 99)
                       on_touch:
                         backgroundColor: gold
@@ -84,8 +84,8 @@
                - Button:
                       id: order_history_page
                       style:
-                        width: 200
-                        height: 72
+                        width: 15%
+                        height: 100%
                         backgroundColor: rgb(66, 49, 99)
                       on_touch:
                         backgroundColor: gold
@@ -108,8 +108,8 @@
                - Button:
                       id: loginpage
                       style:
-                        width: 144
-                        height: 72
+                        width: 15%
+                        height: 100%
                         backgroundColor: rgb(77, 66, 111)
                       on_touch:
                         backgroundColor: gold
