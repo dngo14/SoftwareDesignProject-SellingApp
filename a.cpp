@@ -169,66 +169,6 @@ void display_nothing() {
   }
   }
 }
-
-
-
-// static int num;
-
-// int numberoflines() {
-//     std::ifstream f("Items.txt");
-//     std::string line;
-//     for (num = 0; std::getline(f, line); ++num)
-//     ;
-//     return num;
-
-// }
-// void delete_orders(int button_num) {
-//         string item = "";
-//         string price = "";
-//         string description = "";
-//         string email = "";
-//         string end = "";
-
-//         string file = "Items.txt";
-//         ofstream temp;
-//         ifstream myfile(file.c_str());
-//         temp.open("temp.txt");
-
-//         if (button_num==1) {
-//                 item = "";
-//                 price = "";
-//                 description = "";
-//                 email = "";
-//                 temp << item <<  price << description <<  email ;
-//         }
-//         for (int i = 0; i < button_num-1; i++) {  //pass two line  
-
-//                 getline(myfile, item, '\0');
-//                 getline(myfile, price, '\0');
-//                 getline(myfile, description, '\0');
-//                 getline(myfile, email, '\0');
-//                 temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
-//                  }
-//                 getline(myfile, item, '\0');
-//                 getline(myfile, price, '\0');
-//                 getline(myfile, description, '\0');
-//                 getline(myfile, email, '\0');
-//         for (int j= button_num; j< numberoflines(); j++) {
-//                 getline(myfile, item, '\0');
-//                 getline(myfile, price, '\0');
-//                 getline(myfile, description, '\0');
-//                 getline(myfile, email, '\0');
-//                 temp << item << '\0' <<  price << '\0' << description << '\0' <<  email << '\0' << "\n";
-
-//         }
-  
-//        // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
-//         myfile.close();
-//         temp.close();
-//         remove("Items.txt");
-//        rename("temp.txt", "Items.txt");
-
-// }
 void delete_orders(int x) {
     string file = "Items.txt";
     ofstream temp;
@@ -551,9 +491,9 @@ int main() {
   print_at(3, "S'oled");
   print_at(10, "");
   print_at(19, "");
-  print_at(28, "login");
-  print_at(40, "post");
-  print_at(50, "order");
+  print_at(28, "Login");
+  print_at(40, "Post");
+  print_at(50, "Order");
   print_at(70, "Likes");
   print_at(100, "Item");
   print_at(110, "Price");
@@ -674,6 +614,7 @@ int main() {
       put_char_at(2, state);
     }
       else if (event_id_is("orderone")) {
+      Post.display_nothing();
       Post.delete_orders(1);
       state = '6';
       put_char_at(2, state);

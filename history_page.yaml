@@ -13,10 +13,13 @@
               - Text:
                   style:
                     color: orange
-                    fontSize: 250%
+                    fontSize: 300%
                     position: absolute
-                    left: 25%
-                    top: 10%
+                    left: 30%
+                    top: 20%
+                    fontWeight: 'bold'
+                    fontFamily: 'Courier New'
+                    textDecorationLine: 'underline'
                   index: 290
               - Button:
                   id: profilepage
@@ -38,6 +41,7 @@
                           fontSize: 20
                           position: absolute
                           top: 20%
+                          fontWeight: 'bold'
                         index: 300
               - Button:
                   id: mainpage
@@ -73,6 +77,8 @@
                       position: absolute  
                       top: 20% 
                       left: 12%
+                      fontWeight: 'bold'
+                      textDecorationLine: 'underline'
               - Text:
                     index: 110
                     style:
@@ -81,6 +87,8 @@
                       position: absolute  
                       top: 20% 
                       left: 40%
+                      fontWeight: 'bold'
+                      textDecorationLine: 'underline'
               - Text:
                     index: 120
                     style:
@@ -89,6 +97,8 @@
                       position: absolute  
                       top: 20% 
                       left: 70%
+                      fontWeight: 'bold'
+                      textDecorationLine: 'underline'
         - View:
             style:
               width: 100%
@@ -195,7 +205,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 8320
                           - View:
                               style:
@@ -251,7 +261,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 8620
                           - View:
                               style:
@@ -307,7 +317,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 8920
                           - View:
                               style:
@@ -363,7 +373,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 9220
                           - View:
                               style:
@@ -419,7 +429,7 @@
                                 - Text:
                                     style:
                                       color: orange
-                                      fontSize: 20
+                                      fontSize: 50
                                     index: 9520
                           - View:
                               style:

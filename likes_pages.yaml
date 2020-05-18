@@ -13,10 +13,13 @@
               - Text:
                   style:
                     color: orange
-                    fontSize: 250%
+                    fontSize: 300%
                     position: absolute
                     left: 35%
                     top: 10%
+                    fontWeight: 'bold'
+                    textDecorationLine: 'underline'
+                    fontFamily: 'Courier New'
                   index: 70
               - Button:
                   id: profilepage
@@ -38,6 +41,7 @@
                           fontSize: 20
                           position: absolute
                           top: 20%
+                          fontWeight: 'bold'
                         index: 300
               - Button:
                   id: mainpage
@@ -73,6 +77,8 @@
                       position: absolute  
                       top: 20% 
                       left: 12%
+                      fontWeight: 'bold'
+                      textDecorationLine: 'underline'
               - Text:
                     index: 110
                     style:
@@ -81,6 +87,8 @@
                       position: absolute  
                       top: 20% 
                       left: 40%
+                      fontWeight: 'bold'
+                      textDecorationLine: 'underline'
               - Text:
                     index: 120
                     style:
@@ -89,6 +97,8 @@
                       position: absolute  
                       top: 20% 
                       left: 70%
+                      fontWeight: 'bold'
+                      textDecorationLine: 'underline'
         - View:
             style:
               width: 100%
@@ -159,7 +169,7 @@
                                     id: delete_one
                                     style:
                                       alignItems: 'center'
-                                      width: 54
+                                      width: 56
                                       height: 20
                                       backgroundColor: red
                                       borderRadius: 5
@@ -231,7 +241,7 @@
                                     id: delete_two
                                     style:
                                       alignItems: 'center'
-                                      width: 54
+                                      width: 56
                                       height: 20
                                       backgroundColor: red
                                       borderRadius: 5
@@ -303,7 +313,7 @@
                                     id: delete_three
                                     style:
                                       alignItems: 'center'
-                                      width: 54
+                                      width: 56
                                       height: 20
                                       backgroundColor: red
                                       borderRadius: 5
@@ -375,7 +385,7 @@
                                     id: delete_four
                                     style:
                                       alignItems: 'center'
-                                      width: 54
+                                      width: 56
                                       height: 20
                                       backgroundColor: red
                                       borderRadius: 5
@@ -447,7 +457,7 @@
                                     id: delete_five
                                     style:
                                       alignItems: 'center'
-                                      width: 54
+                                      width: 56
                                       height: 20
                                       backgroundColor: red
                                       borderRadius: 5
@@ -518,7 +528,7 @@
                                     id: delete_six
                                     style:
                                       alignItems: 'center'
-                                      width: 54
+                                      width: 56
                                       height: 20
                                       backgroundColor: red
                                       borderRadius: 5
@@ -592,7 +602,7 @@
                                     id: 
                                     style:
                                       alignItems: 'center'
-                                      width: 54
+                                      width: 56
                                       height: 20
                                       backgroundColor: red
                                       borderRadius: 5
@@ -663,7 +673,7 @@
                                     id: 
                                     style:
                                       alignItems: 'center'
-                                      width: 54
+                                      width: 56
                                       height: 20
                                       backgroundColor: red
                                       borderRadius: 5
