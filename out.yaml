@@ -16,7 +16,7 @@
                     fontWeight: 'bold'
                     position: absolute
                     color: orange
-                    fontSize: 300%
+                    fontSize: 400%
                     fontFamily: 'Courier New'
               - Text:
                   index: 100
@@ -131,10 +131,10 @@
                               style:
                                 color: orange
                                 position: absolute
-                                fontSize: 300%
+                                fontSize: 290%
                                 fontWeight: 'bold'
                                 textDecorationLine: 'underline'
-                              index: 50
+                              index: 290
                
               - View:
                   style:
@@ -1063,6 +1063,38 @@
                                             color: black
                                             fontSize: 16
                                           index: 480
+- View:
+      style:
+        width: 100%
+        height: 100%
+        backgroundColor: rgb(39, 22, 99)
+      children:
+        - Text:
+            index: 500
+            style:
+              color: red
+              fontSize: 40
+              position: absolute
+              left: 17%
+              top: 40%
+        - Button:
+            id: loginpage
+            style:
+              width: 50
+              height: 30
+              position: absolute 
+              top: 50
+              backgroundColor: rgb(139, 0, 0)
+            children:
+               - Text:
+                  style:
+                    color: black
+                    fontSize: 20
+                    position: absolute
+                    left: 10
+                  index: 310
+            
+
 - View:
     style:
       alignItems: 'center'
