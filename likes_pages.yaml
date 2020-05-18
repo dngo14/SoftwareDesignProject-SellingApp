@@ -13,7 +13,7 @@
               - Text:
                   style:
                     color: orange
-                    fontSize: 50
+                    fontSize: 250%
                     position: absolute
                     left: 35%
                     top: 10%
@@ -69,27 +69,26 @@
                     index: 100
                     style:
                       color: orange
-                      fontSize: 30
+                      fontSize: 120%
                       position: absolute  
                       top: 20% 
-                      left: 14%
+                      left: 12%
               - Text:
                     index: 110
                     style:
                       color: orange
-                      fontSize: 30
+                      fontSize: 120%
                       position: absolute  
                       top: 20% 
-                      left: 46%
+                      left: 40%
               - Text:
                     index: 120
                     style:
                       color: orange
-                      fontSize: 30
+                      fontSize: 120%
                       position: absolute  
                       top: 20% 
-                      left: 78%
-
+                      left: 70%
         - View:
             style:
               width: 100%
@@ -659,7 +658,6 @@
                                     style:
                                       color: orange
                                       fontSize: 20
-                                    index: 
                                     index: 9580
                                 - Button:
                                     id: 

@@ -114,7 +114,7 @@ class Post {
         if (getline(dis, end)=="/n") {
           break;
         }
-        for (int x = i; x < 5000; x+=300) {
+        for (int x = i; x < 8000; x+=300) {
           print_at(x, "");
           print_at(x+20, "");
           print_at(x+100, "");
@@ -194,14 +194,6 @@ void display_nothing() {
 //         ifstream myfile(file.c_str());
 //         temp.open("temp.txt");
 
-<<<<<<< HEAD
-        }
-       // cout << "The record with the name " << item << " has been deleted if it exsisted" << endl;
-        myfile.close();
-        temp.close();
-        remove("Items.txt");
-       rename("temp.txt", "Items.txt");
-=======
 //         if (button_num==1) {
 //                 item = "";
 //                 price = "";
@@ -292,13 +284,10 @@ void delete_orders(int x) {
     bought.close();
     remove("Items.txt");
     rename("temp.txt", "Items.txt");
->>>>>>> f97e81642579bc4a2c5951a38e8376306df5d676
 }
 };
 
-
-
-class Orders{
+class Orders {
   string item;
   string price;
   string description;
@@ -568,7 +557,7 @@ int main() {
   print_at(70, "Likes");
   print_at(100, "Item");
   print_at(110, "Price");
-  print_at(120, "Seller");
+  print_at(120, "Description");
   print_at(170, "Post"); 
   print_at(200, "history");
   print_at(210, "logout");
@@ -634,8 +623,10 @@ int main() {
     else if (event_id_is("profilepage")) {
       state = '3';
       put_char_at(2, state);
+      Danny.display_likes();
     }
     else if (event_id_is("order_history_page")) {
+      Danny.display_orders();
       state = '4';
       put_char_at(2, state);
     }
@@ -651,13 +642,11 @@ int main() {
       state = '1';
       put_char_at(2, state);
       Danny.deletemem_likes();
-      Danny.deletemem_orders();
-  }
+    }
     else if (event_id_is("myposts")) {
       state = '7';
       put_char_at(2, state);
     }
-
   
     else if (event_id_is("one")) {
       Danny.store_likes(2000);
@@ -685,27 +674,25 @@ int main() {
       put_char_at(2, state);
     }
       else if (event_id_is("orderone")) {
-      Danny.store_orders(5000);
       Post.delete_orders(1);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("ordertwo")) {
-      Danny.store_orders(2300);
+
       Post.delete_orders(2);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderthree")) {
-      Danny.store_orders(2600);
+
       Post.delete_orders(3);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderfour")) {
-      Danny.store_orders(2900);
       Post.delete_orders(4);
       state = '6';
       put_char_at(2, state);
     }else if (event_id_is("orderfive")) {
-      Danny.store_orders(3200);
+
       Post.delete_orders(5);
       state = '6';
       put_char_at(2, state);
@@ -745,12 +732,7 @@ int main() {
 
   if ('0' == state) add_yaml("login_page.yaml");
   if ('8' == state) add_yaml("login_page.yaml");
-<<<<<<< HEAD
-  else if('1' == state) add_yaml("main_page.yaml"), Post.display(), Post.display_nothing();
-  else if('1' == state) add_yaml("main_page.yaml"), Post.display(), Danny.deletemem_likes();
-=======
   else if('1' == state) add_yaml("main_page.yaml"), Post.display(), Danny.deletemem_likes(), Post.display_nothing();
->>>>>>> f97e81642579bc4a2c5951a38e8376306df5d676
   else if('2' == state) add_yaml("post_page.yaml");
   else if('3'== state) add_yaml("profile_page.yaml");  
   else if('4' == state) add_yaml("history_page.yaml"), Danny.display_orders();
