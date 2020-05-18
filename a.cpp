@@ -159,7 +159,7 @@ void read_global() {
 }
 
 void display_nothing() {
-  for (int i = 2000; i < 8000; i++) {
+  for (int i = 2000; i < 8000; i+=300) {
     char v = get_char_at(i);
   if (v == '~') {
   print_at(i, "");
@@ -232,7 +232,7 @@ void display_nothing() {
 void delete_orders(int x) {
     string file = "Items.txt";
     ofstream temp;
-    ofstream bought("Bought.txt",ios::app);
+    //ofstream bought("Bought.txt",ios::app);
     ifstream myfile(file.c_str());
     temp.open("temp.txt");
     int i = 1;
@@ -255,7 +255,7 @@ void delete_orders(int x) {
       getline(myfile, tdescription, '\0');
       getline(myfile, temail, '\0');
       getline(myfile, tend);
-      bought << titem << '\0' <<  tprice << '\0' << tdescription << '\0' <<  temail << '\0' << "\n";
+      //bought << titem << '\0' <<  tprice << '\0' << tdescription << '\0' <<  temail << '\0' << "\n";
     while(getline(myfile, item, '\0')) {
       getline(myfile, price, '\0');
       getline(myfile, description, '\0');
@@ -270,7 +270,7 @@ void delete_orders(int x) {
       getline(myfile, tdescription, '\0');
       getline(myfile, temail, '\0');
       getline(myfile, tend);
-      bought << titem << '\0' <<  tprice << '\0' << tdescription << '\0' <<  temail << '\0' << "\n";
+      //bought << titem << '\0' <<  tprice << '\0' << tdescription << '\0' <<  temail << '\0' << "\n";
     while(getline(myfile, item, '\0')) {
       getline(myfile, price, '\0');
       getline(myfile, description, '\0');
@@ -281,7 +281,7 @@ void delete_orders(int x) {
     }
     myfile.close();
     temp.close();
-    bought.close();
+    //bought.close();
     remove("Items.txt");
     rename("temp.txt", "Items.txt");
 }
