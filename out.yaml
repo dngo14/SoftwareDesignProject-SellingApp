@@ -1108,7 +1108,11 @@
       - Text:
           style:
             color: orange
+<<<<<<< HEAD
+            fontSize: 400%
+=======
             fontSize: 50
+>>>>>>> 2b26af86a0570fc1da74d8f6dc3aa6f2c3cf28f8
             right: 20
             left: 20
             fontFamily: 'Courier New'
