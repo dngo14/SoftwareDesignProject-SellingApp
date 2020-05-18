@@ -53,10 +53,12 @@ public:
      getline(U, pass, '\0'); 
      if (user == nuser && pass == npass) {
        add_yaml("main_page.yaml");
-       break;
+        break;
      }
-     else { add_yaml("login_failure.yaml");}
-     }
+}
+       add_yaml("login_failure.yaml");
+
+  
 }
 void create_account() {
     ofstream fout("UandP.txt",ios::app);
@@ -522,7 +524,7 @@ int main() {
   print_at(473, "Like");
   print_at(480, "Order");
   print_at(487, "Remove");
-  print_at(500, "Incorrect username or passord. Please try it again!");
+  print_at(500, "Incorrect!");
 
   
 
