@@ -16,7 +16,7 @@
                     fontWeight: 'bold'
                     position: absolute
                     color: orange
-                    fontSize: 300%
+                    fontSize: 400%
                     fontFamily: 'Courier New'
               - Text:
                   index: 100
@@ -131,7 +131,7 @@
                               style:
                                 color: orange
                                 position: absolute
-                                fontSize: 300%
+                                fontSize: 290%
                                 fontWeight: 'bold'
                                 textDecorationLine: 'underline'
                               index: 50
